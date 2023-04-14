@@ -11,6 +11,9 @@ const action = async () => {
     },
   });
   const res = response.json();
+  res.then((result) => {
+    alert(`${result.message}, notebook has been generated`);
+  });
 };
 
 btn.addEventListener("click", action);
