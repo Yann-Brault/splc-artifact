@@ -57,7 +57,7 @@ Feel free to modify the port.
 
 Go to the given address and click the button to generate the notebook.
 
-The notebook is generated at the following path (from projet directory root): "/static/Notebooks/hello_world.ipynb"
+The notebook is generated at the root of the projet directory.
 
 ## To stop
 
