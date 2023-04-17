@@ -1,0 +1,767 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+	<struct>
+		<and mandatory="true" name="KnowledgeBase">
+			<and mandatory="true" name="InitialData">
+				<and name="tsAnalysis">
+					<alt name="DataDimensions">
+						<feature name="SixToTenD"/>
+						<feature name="ThreeToFiveD"/>
+						<feature name="TwoD"/>
+						<feature name="MoreThanTenD"/>
+						<feature name="OneDimension"/>
+					</alt>
+					<alt name="AcquisitionSampling">
+						<feature name="microsecondsSampling"/>
+						<feature name="secondsSampling"/>
+						<feature name="HourlySampling"/>
+						<feature name="IrregularSampling"/>
+					</alt>
+					<and name="Ts_properties">
+						<feature name="IsStationary"/>
+						<feature name="isCyclycal"/>
+						<feature name="HasTrend"/>
+					</and>
+				</and>
+				<and name="GeneralAnalysis">
+					<or name="MissingValue_initial">
+						<feature name="StructuralMV"/>
+						<feature name="MCARMV"/>
+						<feature name="MNARMV"/>
+					</or>
+					<and name="ValuesUniformity">
+						<feature name="Normalized"/>
+					</and>
+					<alt name="Contamination">
+						<feature name="balancedClassif"/>
+						<feature name="unbalancedClassif"/>
+					</alt>
+					<and name="DataDomain">
+						<feature name="TSDomain"/>
+					</and>
+				</and>
+				<alt name="Data_Format">
+					<feature name="UCR_format"/>
+					<feature name="Raw_format"/>
+				</alt>
+			</and>
+			<and mandatory="true" name="InitialProblem">
+				<alt name="MLCategories">
+					<feature name="semiSupervised"/>
+					<feature name="unsupervised"/>
+					<feature name="supervised"/>
+				</alt>
+				<alt name="AnomalyAnalysis">
+					<feature name="SingleOutliers"/>
+					<feature name="PatternAnomalies"/>
+					<feature name="GlobalAnomalies"/>
+				</alt>
+				<alt name="TraingingSet">
+					<feature name="CleanTrainingDataset"/>
+					<feature name="LabeledTrainingset"/>
+					<feature name="FewLabels"/>
+				</alt>
+				<alt name="LearningMode">
+					<feature name="OnlineLearning"/>
+					<feature name="OfflineLearning"/>
+				</alt>
+				<alt name="OutliersInterpretation">
+					<feature name="NoInterest"/>
+					<feature name="HardwareIssue"/>
+					<feature name="AbnormalEvents"/>
+				</alt>
+				<alt name="MissingValuesInterpretation">
+					<feature name="NoInterest_MV"/>
+					<feature name="Hardware_MV"/>
+					<feature name="MV_anomalies"/>
+					<feature name="MV_expected"/>
+				</alt>
+				<alt name="ApplicationDomain">
+					<feature name="IntrusionDetection"/>
+					<feature name="FraudDetection"/>
+					<feature name="HealthMonitoring"/>
+					<feature name="DefectDetection"/>
+				</alt>
+				<and name="PredictionsExpectations">
+					<feature name="NoVariation"/>
+					<feature name="NoFalseNeg"/>
+					<feature name="NoFalsePos"/>
+				</and>
+				<and name="HardwareConstraints">
+					<feature name="LimitedGPU"/>
+					<feature name="LimitedRAM"/>
+					<feature name="LimitedElectricalEnergy"/>
+				</and>
+				<and name="OptimizationObjectives">
+					<feature name="GPUoptim"/>
+					<feature name="CPUoptim"/>
+					<feature name="ElectricityOptim"/>
+					<feature name="RAMOptim"/>
+					<feature name="LimitedTime"/>
+				</and>
+				<and name="InferenceSetUp">
+					<feature name="Desktop"/>
+					<feature name="microController_edge"/>
+					<feature name="Server"/>
+				</and>
+			</and>
+			<and mandatory="true" name="Solution">
+				<and mandatory="true" name="Algorithms">
+					<alt name="ML_Algorithms">
+						<alt name="ReconstructionNN">
+							<feature name="LSTMAE"/>
+							<feature name="AutoEncoder"/>
+						</alt>
+						<alt name="Neuralnetworks">
+							<feature name="Resnet"/>
+							<feature name="CNN"/>
+							<feature name="LSTM"/>
+							<feature name="EfficientNet"/>
+							<feature name="MLP"/>
+						</alt>
+						<alt name="EzakoCustom">
+							<feature name="FastRollingSTd"/>
+							<feature name="PieceWiseRegression"/>
+							<feature name="autoThreshold"/>
+						</alt>
+						<alt name="DecisionTrees">
+							<feature name="RandomForest"/>
+							<feature name="IsolationForest"/>
+							<feature name="DecisionTree"/>
+						</alt>
+						<alt name="FrontierSeparation">
+							<feature name="OCSVM"/>
+							<feature name="SVM"/>
+						</alt>
+						<and name="LazyLeaners">
+							<feature name="KNN"/>
+						</and>
+						<alt name="AutoMl">
+							<feature name="AutoPytorch"/>
+							<feature name="AutoKeras"/>
+						</alt>
+						<and name="NaiveBayes">
+							<feature name="GaussianNaiveBayes"/>
+						</and>
+						<and name="LinearLearners">
+							<feature name="LogisticRegression"/>
+						</and>
+					</alt>
+					<and name="ReconstructionErrorMethod">
+						<alt name="DIstanceBased">
+							<feature name="MAE"/>
+							<feature name="MSE"/>
+						</alt>
+						<or name="ThresholdSetting">
+							<feature name="maxReconstructionTrain"/>
+							<feature name="ZscoreThreshold"/>
+						</or>
+					</and>
+					<and name="AlgoProperties">
+						<feature name="ReconstructionApproach"/>
+					</and>
+				</and>
+				<and name="DataPreparation">
+					<and name="ClassicalPreprocessings">
+						<and name="NormalizedTransformation">
+							<alt name="DataNormalization">
+								<feature name="StandardScaler"/>
+								<feature name="MinMaxScaler"/>
+								<feature name="RobustScaler"/>
+							</alt>
+						</and>
+						<alt name="MissingValuesTransformation">
+							<and name="MissingValue_FalseToTrue">
+								<feature name="DownSampling"/>
+							</and>
+							<alt name="MissingValue_TrueToFalse">
+								<feature name="FrontFill"/>
+								<feature name="BackFill"/>
+							</alt>
+						</alt>
+						<and name="Imputing">
+							<feature name="SimpleImputer"/>
+						</and>
+					</and>
+					<and name="FeatureEng">
+						<and name="DimensionalityReduction">
+							<alt name="linear">
+								<feature name="PCA95"/>
+								<feature name="PCA98"/>
+								<feature name="VarianceThreshold"/>
+							</alt>
+						</and>
+						<alt name="MultiVariedTransformation">
+							<alt name="MultiVariedFalseToTrue">
+								<feature name="explicitFeatureCompute"/>
+								<feature name="ComputeFeatures"/>
+								<feature name="OneHotEncoding"/>
+							</alt>
+							<feature name="MultiVariedTrueToFalse"/>
+						</alt>
+						<and name="DataAugmentation">
+							<feature name="Smote"/>
+						</and>
+					</and>
+					<and name="TSPreprocessing">
+						<and name="Unification">
+							<and name="ResamplingUnification">
+								<feature name="torchaudioResample"/>
+							</and>
+							<and name="DimensionUnification">
+								<feature name="mean"/>
+							</and>
+							<alt name="LengthUnification">
+								<feature name="cutting"/>
+								<feature name="padding"/>
+							</alt>
+						</and>
+						<and name="FrequencyTransformation">
+							<feature name="MelSpectrogram"/>
+							<feature name="FFT"/>
+							<feature name="STFT"/>
+						</and>
+						<and name="MathematiaclTransformations">
+							<feature name="Derivative1"/>
+							<feature name="derivative2"/>
+							<feature name="derivative3"/>
+						</and>
+						<and name="TStoImageTransformation">
+							<feature name="GrammianAngularField"/>
+							<feature name="MarkovTransforamationField"/>
+							<feature name="AA2dReshaping"/>
+						</and>
+					</and>
+				</and>
+				<and name="DataFormatter">
+					<feature name="toUCR_format"/>
+					<feature name="fromUCR_format"/>
+				</and>
+				<and name="Evaluation">
+					<and name="ML_metrics">
+						<feature name="Fscore"/>
+						<feature name="Precision"/>
+						<feature name="Recall"/>
+						<feature name="ROC_curve"/>
+						<feature name="MCC"/>
+					</and>
+					<and name="Resources_metrics">
+						<feature name="Inference_time"/>
+						<feature name="inference_RAM"/>
+						<feature name="Training_time"/>
+						<feature name="Training_RAM"/>
+					</and>
+					<and name="ML_ops_metrics">
+						<and name="Model_drift_detection">
+							<feature name="ADDM"/>
+							<feature name="ADWIN"/>
+							<feature name="KSWIN"/>
+							<feature name="PageHinkley"/>
+							<feature name="DDM"/>
+						</and>
+					</and>
+				</and>
+			</and>
+			<and name="Sources">
+				<alt name="Author">
+					<and name="MasterStudents">
+						<feature name="MS_DSc1"/>
+						<feature name="MS_DSc2"/>
+						<feature name="MS_DSC3"/>
+						<feature name="MS_DSc4"/>
+					</and>
+					<and name="Datascientists">
+						<feature name="DSc1"/>
+						<feature name="DSc2"/>
+						<feature name="Dsc3"/>
+						<feature name="Dsc4"/>
+						<feature name="Dsc5"/>
+						<feature name="Dsc6"/>
+						<feature name="Dsc7"/>
+					</and>
+					<feature name="Anonymous"/>
+				</alt>
+				<and name="Organization">
+					<feature name="I3S"/>
+					<feature name="INRIA"/>
+					<feature name="Other"/>
+				</and>
+				<and name="SOTA">
+					<and name="Papers">
+						<feature name="X220608476v2"/>
+						<feature name="s12864_019_6413_7"/>
+						<feature name="arXiv220304769"/>
+						<feature name="JAS20191911747"/>
+					</and>
+					<and name="Thesis">
+						<feature name="Benkabou_thesis"/>
+					</and>
+				</and>
+			</and>
+			<and name="states">
+				<and name="TsAnalysis_STATE">
+					<and name="Acquisition_sampling_state">
+						<feature name="HourlySampling_STATE"/>
+						<feature name="microsecondsSampling_STATE"/>
+						<feature name="secondsSampling_STATE"/>
+						<feature name="IrregularSampling_STATE"/>
+					</and>
+					<and name="ts_properties_STATE">
+						<feature name="isStationary_STATE"/>
+						<feature name="IsCyclical_STATE"/>
+						<feature name="HasTrend_STATE"/>
+					</and>
+				</and>
+				<and name="GenralDataAnalysis_State">
+					<and name="MissingValues_STATE">
+						<feature name="MCARMV_STATE"/>
+						<feature name="MNARMV_STATE"/>
+						<feature name="STRUCTURALMV_STATE"/>
+					</and>
+					<and name="ValuesUniformity_STATE">
+						<feature name="Normalized_STATE"/>
+					</and>
+					<and name="DataDimensions_STATE">
+						<feature name="SixToTenD_STATE"/>
+						<feature name="ThreeToFiveD_STATE"/>
+						<feature name="TwoD_STATE"/>
+						<feature name="MoreThanTenD_STATE"/>
+						<feature name="OneDimension_STATE"/>
+					</and>
+					<and name="Contamination_State">
+						<feature name="hundredth_STATE"/>
+						<feature name="balancedClassif_STATE"/>
+						<feature name="thousandth_STATE"/>
+					</and>
+					<and name="DataDomain_STATE">
+						<feature name="TwoDDomain_STATE"/>
+						<feature name="TSDomain_STATE"/>
+					</and>
+					<and name="Data_format_STATE">
+						<feature name="UCR_Format_STATE"/>
+						<feature name="Raw_Format_STATE"/>
+					</and>
+				</and>
+			</and>
+		</and>
+	</struct>
+	<constraints>
+		<rule>
+			<disj>
+				<not>
+					<var>ReconstructionNN</var>
+				</not>
+				<var>ReconstructionApproach</var>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<not>
+					<var>semiSupervised</var>
+				</not>
+				<disj>
+					<var>CleanTrainingDataset</var>
+					<var>FewLabels</var>
+				</disj>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<not>
+					<var>MelSpectrogram</var>
+				</not>
+				<var>TSDomain_STATE</var>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<var>semiSupervised</var>
+				<not>
+					<var>CleanTrainingDataset</var>
+				</not>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<var>semiSupervised</var>
+				<not>
+					<var>FewLabels</var>
+				</not>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<var>LabeledTrainingset</var>
+				<disj>
+					<var>FewLabels</var>
+					<disj>
+						<var>CleanTrainingDataset</var>
+						<var>unsupervised</var>
+					</disj>
+				</disj>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<var>CleanTrainingDataset</var>
+				<disj>
+					<not>
+						<var>ReconstructionApproach</var>
+					</not>
+					<var>ZscoreThreshold</var>
+				</disj>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<not>
+					<var>LSTMAE</var>
+				</not>
+				<not>
+					<var>MCARMV_STATE</var>
+				</not>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<not>
+					<var>LSTMAE</var>
+				</not>
+				<not>
+					<var>MNARMV_STATE</var>
+				</not>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<not>
+					<var>LSTMAE</var>
+				</not>
+				<not>
+					<var>STRUCTURALMV_STATE</var>
+				</not>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<var>STRUCTURALMV_STATE</var>
+				<not>
+					<var>StructuralMV</var>
+				</not>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<var>MNARMV_STATE</var>
+				<disj>
+					<not>
+						<var>MNARMV</var>
+					</not>
+					<var>MissingValue_TrueToFalse</var>
+				</disj>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<var>MCARMV_STATE</var>
+				<disj>
+					<not>
+						<var>MCARMV</var>
+					</not>
+					<var>MissingValue_TrueToFalse</var>
+				</disj>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<var>ThreeToFiveD_STATE</var>
+				<disj>
+					<var>SixToTenD_STATE</var>
+					<disj>
+						<var>MoreThanTenD_STATE</var>
+						<not>
+							<var>PCA95</var>
+						</not>
+					</disj>
+				</disj>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<not>
+					<var>UCR_format</var>
+				</not>
+				<var>OneDimension</var>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<var>ThreeToFiveD_STATE</var>
+				<disj>
+					<var>SixToTenD_STATE</var>
+					<disj>
+						<var>MoreThanTenD_STATE</var>
+						<not>
+							<var>PCA98</var>
+						</not>
+					</disj>
+				</disj>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<var>Normalized_STATE</var>
+				<disj>
+					<not>
+						<var>Normalized</var>
+					</not>
+					<var>NormalizedTransformation</var>
+				</disj>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<not>
+					<var>isStationary_STATE</var>
+				</not>
+				<var>IsStationary</var>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<not>
+					<var>CleanTrainingDataset</var>
+				</not>
+				<disj>
+					<not>
+						<var>ReconstructionApproach</var>
+					</not>
+					<var>maxReconstructionTrain</var>
+				</disj>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<not>
+					<var>FrequencyTransformation</var>
+				</not>
+				<var>TSDomain</var>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<not>
+					<var>MissingValue_TrueToFalse</var>
+				</not>
+				<disj>
+					<var>MCARMV</var>
+					<disj>
+						<var>MNARMV</var>
+						<var>StructuralMV</var>
+					</disj>
+				</disj>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<not>
+					<var>NormalizedTransformation</var>
+				</not>
+				<not>
+					<var>Normalized</var>
+				</not>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<not>
+					<var>ResamplingUnification</var>
+				</not>
+				<var>tsAnalysis</var>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<not>
+					<var>LSTMAE</var>
+				</not>
+				<not>
+					<var>ResamplingUnification</var>
+				</not>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<not>
+					<var>DimensionUnification</var>
+				</not>
+				<var>tsAnalysis</var>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<not>
+					<var>LengthUnification</var>
+				</not>
+				<var>tsAnalysis</var>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<not>
+					<var>LazyLeaners</var>
+				</not>
+				<var>supervised</var>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<not>
+					<var>AutoMl</var>
+				</not>
+				<not>
+					<var>unsupervised</var>
+				</not>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<not>
+					<var>microController_edge</var>
+				</not>
+				<var>LimitedRAM</var>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<not>
+					<var>microController_edge</var>
+				</not>
+				<var>LimitedGPU</var>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<not>
+					<var>microController_edge</var>
+				</not>
+				<not>
+					<var>TStoImageTransformation</var>
+				</not>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<not>
+					<var>DataDomain</var>
+				</not>
+				<disj>
+					<var>FrequencyTransformation</var>
+					<disj>
+						<var>TSDomain</var>
+						<var>TwoDDomain_STATE</var>
+					</disj>
+				</disj>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<not>
+					<var>UCR_Format_STATE</var>
+				</not>
+				<disj>
+					<var>UCR_format</var>
+					<var>Raw_format</var>
+				</disj>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<not>
+					<var>UCR_Format_STATE</var>
+				</not>
+				<disj>
+					<var>UCR_format</var>
+					<var>toUCR_format</var>
+				</disj>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<not>
+					<var>Raw_Format_STATE</var>
+				</not>
+				<disj>
+					<var>Raw_format</var>
+					<var>UCR_format</var>
+				</disj>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<not>
+					<var>Raw_Format_STATE</var>
+				</not>
+				<disj>
+					<var>Raw_format</var>
+					<var>fromUCR_format</var>
+				</disj>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<not>
+					<var>Neuralnetworks</var>
+				</not>
+				<disj>
+					<var>FewLabels</var>
+					<var>LabeledTrainingset</var>
+				</disj>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<not>
+					<var>toUCR_format</var>
+				</not>
+				<var>OneDimension_STATE</var>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<var>OneDimension_STATE</var>
+				<not>
+					<var>MultiVariedTrueToFalse</var>
+				</not>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<var>OneDimension_STATE</var>
+				<not>
+					<var>OneDimension</var>
+				</not>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<not>
+					<var>OneDimension_STATE</var>
+				</not>
+				<not>
+					<var>DimensionalityReduction</var>
+				</not>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<not>
+					<var>TwoD_STATE</var>
+				</not>
+				<not>
+					<var>DimensionalityReduction</var>
+				</not>
+			</disj>
+		</rule>
+	</constraints>
+</featureModel>

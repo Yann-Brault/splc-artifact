@@ -1,0 +1,78 @@
+{
+  "cell_type": "code",
+  "parameters": {
+    "input": {
+      "number_of_input": "2",
+      "current_name": "input_x",
+      "suggestion": [
+        "X, bins\n",
+        "X_in, bins_in\n"
+      ]
+    },
+    "output": {
+      "number_of_output": "1",
+      "current_name": "output_x",
+      "suggestion": [
+        "scores\n",
+        "scores_out\n",
+        "score_list\n"
+      ]
+    }
+  },
+  "deprecated": [
+    "# /Evaluation/generated_kfold\n",
+    "def generated_kfold(input_1, input_2):\n",
+    "    input_1 = input_1.copy() # copy\n",
+    "    kf = KFold(n_splits = input_2)\n",
+    "    output_1 = []\n",
+    "    for train_index, test_index in kf.split(input_1):\n",
+    "         # Please fill the loop with all your data treatment \n",
+    "         # Use the predefined functions\n",
+    "         # Don't forget to process the score and add it to the output list\n",
+    "    return output_1,np.mean(output_1)\n"
+  ],
+  "source": {
+    "instance": [
+      "# /Evaluation/generated_kfold\n",
+      "def generated_kfold(dataset, bins):\n",
+      "    dataset_c = dataset.copy()\n",
+      "    kf = kFold(n_split = bins)\n",
+      "    scores = []\n",
+      "    for train_index, test_index in kf.split(dataset_c):\n",
+      "        # Please look at the generated_workflow function definition below and fill it according to instructions\n",
+      "        scores_output = generated_workflow(scores, train_index, test_index)\n",
+      "    scores_avg = np.mean(scores_output)\n",
+      "    return scores, scores_avg\n",
+      "\n",
+      "def generated_workflow(scores, train_index, test_index):\n",
+      "    # this function is a minimal version of your workflow\n",
+      "\n",
+      "    # Data formatting section\n",
+      "    # Here you can prepare you data the way you want using train and test index\n",
+      "    \n",
+      "    # Please fill the next sections with function calls to reproduce your workflow\n",
+      "    \n",
+      "    # Train set preprocessing\n",
+      "    \n",
+      "    # Model training\n",
+      "    \n",
+      "    # Test set preprocessing\n",
+      "    \n",
+      "    # Model prediction\n",
+      "    \n",
+      "    # Add your metric calculation to the scores list\n",
+      "    \n",
+      "    return scores\n"
+    ]
+  },
+  "usage": {
+    "instance": [
+      "# Please change inputs with the one you want\n",
+      "kfold_scores, kfold_scores_avg = generated_kfold(dataset, bins)\n"
+    ]
+  },
+  "imports": [
+    "import numpy as np\n",
+    "from sklearn.model_selection import KFold\n"
+  ]
+}

@@ -1,3 +1,4 @@
+import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
@@ -19,3 +20,9 @@ app.include_router(configurator_router)
 
 app.mount("/", StaticFiles(directory="./static/configurator",
           html=True), name="configurator")
+
+# if __name__ == "__main__":
+#     config = uvicorn.Config("app:app", port=5000,
+#                             log_level="info", reload=True)
+#     server = uvicorn.Server(config)
+#     server.run()

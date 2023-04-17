@@ -1,0 +1,31 @@
+{
+  "Train": [
+    "# Model training\n",
+    "# Algo/NaiveBayes\n",
+    "\n",
+    "def gnb_train(obj, x_data, y_data):\n",
+    "    return obj.fit(x_data, y_data)\n",
+    "\n",
+    "gnb = GaussianNB()\n",
+    "model = gnb_train(gnb, x_train_transformed, y_train_augmented)"
+  ],
+  "Valid": [
+    "# Prediction\n",
+    "# Algo/NaiveBayes\n",
+    "\n",
+    "def gnb_predicy(obj, x_data):\n",
+    "    return obj.predict(x_data)\n",
+    "\n",
+    "y_pred_valid = gnb_predicy(gnb, x_valid_transformed)"
+  ],
+  "Test": [
+    "# Prediction\n",
+    "# Algo/NaiveBayes\n",
+    "\n",
+    "def gnb_predicy(obj, x_data):\n",
+    "    return obj.predict(x_data)\n",
+    "\n",
+    "y_pred = gnb_predicy(gnb, x_test_transformed)"
+  ],
+  "Imports": ["from sklearn.naive_bayes import GaussianNB\n"]
+}

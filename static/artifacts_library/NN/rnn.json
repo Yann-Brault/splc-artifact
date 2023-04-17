@@ -1,0 +1,72 @@
+{
+  "cell_type": "code",
+  "source": {
+    "instance": [
+      "# /NN/generated_rnn\n",
+      "def generated_rnn():\n",
+      "    model = Sequential()\n",
+      "\n",
+      "    model.add(LSTM(input_dim=x_train.shape[-1], output_dim=50, return_sequences=True))\n",
+      "    model.add(Dropout(0.2)\n",
+      "\n",
+      "    model.add(LSTM(100, return_sequences=False))\n",
+      "    model.add(Dropout(0.2))\n",
+      "\n",
+      "    model.add(Dense(units=1))\n",
+      "    model.add(Activation('linear'))\n",
+      "    return model\n"
+    ],
+    "training": [
+      "def unroll(data, sequence_length=24):\n",
+      "    result = []\n",
+      "    for index in range(len(data) - sequence_length):\n",
+      "        result.append(data[index: index+ sequence_length])\n",
+      "    return np.asarray(result)\n",
+      "\n",
+      "\n",
+      "def rnn_fit(model, x_train, y_train):\n",
+      "    start = time.time()\n",
+      "    model.fit(x_train, y_train, batch_size=3028, nb_epochs=30, validation_split=0.1)\n",
+      "    print(f'Fitting time: {time.time() - start}')\n",
+      "    return model\n"
+    ],
+    "test": [
+      "def rnn_predict(model, x_test, y_test):\n",
+      "    loaded_model = model\n",
+      "    diff = []\n",
+      "    ratio = []\n",
+      "    prediction = loaded_model.predict(x_test)\n",
+      "    for u in range(len(y_test)):\n",
+      "        pr = p[u][0]\n",
+      "        ratio.append((y_test[u]/pr) - 1)\n",
+      "        diff.append(abs(y_test[u] - pr))\n",
+      "    return ratio, diff\n"
+    ]
+  },
+  "usage": {
+    "instance": [
+      "model = generated_rnn()\n",
+      "model.compile(loss='mse', optimizer='rmsprop')\n"
+    ],
+    "training": [
+      "x_train = unroll(x_train, unroll_length)\n",
+      "x_test = unroll(x_test, unroll_length)\n",
+      "y_train = y_train[-x_train.shape[0]:]\n",
+      "y_test = y_test[-x_test.shape[0]:]\n",
+      "model = rnn_fit(model, x_train, y_train)\n"
+    ],
+    "test": [
+      "ratio, diff = rnn_predict(model, x_test, y_test)\n"
+    ]
+  },
+  "imports": [
+    "from keras.layers.core import Dense\n",
+    "from keras.layers.core import Activation\n",
+    "from keras.layers.core import Dropout\n",
+    "from keras.layers.recurrent import LSTM\n",
+    "from keras.models import Sequential\n",
+    "import numpy as np\n",
+    "import time\n"
+
+  ]
+}

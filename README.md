@@ -13,7 +13,7 @@ If the execution crash beacause of permissions reason, run it with sudo.
 
 ## To run
 
-To run the projet use the command `./run.sh`
+To run the projet use the command `./start.sh`
 
 If the container is up and running you should see a similar output:
 
@@ -22,15 +22,30 @@ CONTAINER ID   IMAGE           COMMAND                  CREATED        STATUS   
 947476ba0e59   splc-artifact   "uvicorn app.main:ap…"   1 second ago   Up Less than a second   0.0.0.0:5050->5000/tcp, :::5050->5000/tcp   splc-application
 ```
 
-Go to `http://localhost:5050/` and click the button in order to generate the notebook.
+Go to this [link](http://localhost:5050/) and click the button in order to generate the notebook.
 
-Notebook is generated in the file system of the docker container
+Notebook is generated in the file system of the docker container.
+In order to display the content of the generated notebook (as a json file), follow these steps:
+
+- Go into a terminal
+- Execute this command `docker exec -it splc-application sh`
+- you will see a prompt like this `/code # `
+- you can now execute classic shell commands
+- So if you use `ls` you will be able to see the container file system
+- The output of this command is:
+  - app/
+  - static/
+  - requirements.txt
+  - hello_world.ipynb (if you have generated the notebook)
+- To display the content as a json file, execute the command `cat hello_world.ipynb`
+- You can look for the "cells" key that is a list of all cells composing the document
+- execute `exit` to quit the container shell
 
 ## To stop
 
 To stop the project use the commande `./stop.sh`
 
-# Run and stop the project on your computer
+# Run and stop via full installation (Only on unix installation)
 
 ## Dependencies
 

@@ -1,0 +1,123 @@
+{
+  "metadata": {
+    "last_generation": "2023-04-12",
+    "features_count": 23
+  },
+  "features": {
+    "MissingAlgoArtifacts": {
+      "known": true,
+      "dir": "Templating",
+      "path": "./static/artifacts_library/Templating/MissingAlgoArtifacts.json"
+    },
+    "MissingMetricsArtifacts": {
+      "known": true,
+      "dir": "Templating",
+      "path": "./static/artifacts_library/Templating/MissingMetricsArtifacts.json"
+    },
+    "MissingDataArtifacts": {
+      "known": true,
+      "dir": "Templating",
+      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
+    },
+    "RobustScaler": {
+      "known": true,
+      "dir": "Normalization",
+      "path": "./static/artifacts_library/Normalization/RobustScaler.json"
+    },
+    "MinMaxScaler": {
+      "known": true,
+      "dir": "Normalization",
+      "path": "./static/artifacts_library/Normalization/MinMaxScaler.json"
+    },
+    "StandardScaler": {
+      "known": true,
+      "dir": "Normalization",
+      "path": "./static/artifacts_library/Normalization/StandardScaler.json"
+    },
+    "OneHotEncoding": {
+      "known": true,
+      "dir": "Transformation",
+      "path": "./static/artifacts_library/Transformation/OneHotEncoding.json"
+    },
+    "rnn": {
+      "known": true,
+      "dir": "NN",
+      "path": "./static/artifacts_library/NN/rnn.json"
+    },
+    "ROC_curve": {
+      "known": true,
+      "dir": "Metrics",
+      "path": "./static/artifacts_library/Metrics/ROC_curve.json"
+    },
+    "Recall": {
+      "known": true,
+      "dir": "Metrics",
+      "path": "./static/artifacts_library/Metrics/Recall.json"
+    },
+    "Precision": {
+      "known": true,
+      "dir": "Metrics",
+      "path": "./static/artifacts_library/Metrics/Precision.json"
+    },
+    "Fscore": {
+      "known": true,
+      "dir": "Metrics",
+      "path": "./static/artifacts_library/Metrics/Fscore.json"
+    },
+    "VarianceThreshold": {
+      "known": true,
+      "dir": "FeatureEngineering",
+      "path": "./static/artifacts_library/FeatureEngineering/VarianceThreshold.json"
+    },
+    "PCA95": {
+      "known": true,
+      "dir": "FeatureEngineering",
+      "path": "./static/artifacts_library/FeatureEngineering/PCA95.json"
+    },
+    "IsolationForest": {
+      "known": true,
+      "dir": "Algo",
+      "path": "./static/artifacts_library/Algo/IsolationForest.json"
+    },
+    "KNN": {
+      "known": true,
+      "dir": "Algo",
+      "path": "./static/artifacts_library/Algo/KNN.json"
+    },
+    "SVM": {
+      "known": true,
+      "dir": "Algo",
+      "path": "./static/artifacts_library/Algo/SVM.json"
+    },
+    "NaiveBayes": {
+      "known": true,
+      "dir": "Algo",
+      "path": "./static/artifacts_library/Algo/NaiveBayes.json"
+    },
+    "OCSVM": {
+      "known": true,
+      "dir": "Algo",
+      "path": "./static/artifacts_library/Algo/OCSVM.json"
+    },
+    "RandomForest": {
+      "known": true,
+      "dir": "Algo",
+      "path": "./static/artifacts_library/Algo/RandomForest.json"
+    },
+    "MLP": {
+      "known": true,
+      "dir": "Algo",
+      "path": "./static/artifacts_library/Algo/MLP.json"
+    },
+    "Smote": {
+      "known": true,
+      "dir": "Augmentation",
+      "path": "./static/artifacts_library/Augmentation/Smote.json"
+    },
+    "kfold": {
+      "known": true,
+      "dir": "Evaluation",
+      "path": "./static/artifacts_library/Evaluation/kfold.json"
+    }
+  }
+}

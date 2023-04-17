@@ -1,0 +1,32 @@
+{
+  "Train": [
+    "# Data treatment\n",
+    "# FeatureEngineering/Variancethreshold\n",
+    "\n",
+    "def selector_train(obj, x_data): \n",
+    "    obj.fit(x_data)\n",
+    "    return obj.transform(x_data)\n",
+    "\n",
+    "selector = VarianceThreshold()\n",
+    "x_train_augmented = selector_train(selector, x_train_augmented)"
+  ],
+  "Valid": [
+    "# Data treatment\n",
+    "# FeatureEngineering/Variancethreshold\n",
+    "\n",
+    "def selector_valid(obj, x_data):\n",
+    "    return obj.transform(x_data)\n",
+    "\n",
+    "x_valid_augmented = selector_valid(selector, x_valid_normalized)"
+  ],
+  "Test": [
+    "# Data treatment\n",
+    "# FeatureEngineering/Variancethreshold\n",
+    "\n",
+    "def selector_test(obj, x_data):\n",
+    "    return obj.transform(x_data)\n",
+    "\n",
+    "x_test_augmented = selector_test(selector, x_test_normalized)"
+  ],
+  "Imports": ["from sklearn.feature_selection import VarianceThreshold\n"]
+}
