@@ -18,8 +18,8 @@ To run the projet use the command `./run.sh`
 If the container is up and running you should see a similar output:
 
 ```
-CONTAINER ID   IMAGE      COMMAND                  CREATED                  STATUS                  PORTS                                       NAMES
-bf5899bde536   rocknrwl   "uvicorn app.main:ap…"   Less than a second ago   Up Less than a second   0.0.0.0:5050->5000/tcp, :::5050->5000/tcp   rocknrwl-application
+CONTAINER ID   IMAGE           COMMAND                  CREATED        STATUS                  PORTS                                       NAMES
+947476ba0e59   splc-artifact   "uvicorn app.main:ap…"   1 second ago   Up Less than a second   0.0.0.0:5050->5000/tcp, :::5050->5000/tcp   splc-application
 ```
 
 Go to `http://localhost:5050/` and click the button in order to generate the notebook.
@@ -44,10 +44,10 @@ Run the command `pip install --no-cache-dir --upgrade -r ./app/requirements.txt`
 
 It will install :
 
-- fastapi
-- pydantic
-- uvicorn
-- nbformat
+- [fastapi](https://fastapi.tiangolo.com/)
+- [pydantic](https://docs.pydantic.dev/)
+- [uvicorn](https://www.uvicorn.org/)
+- [nbformat](https://github.com/jupyter/nbformat)
 
 Then run the command `uvicorn app.main:app --port 5000 --host 0.0.0.0`
 
