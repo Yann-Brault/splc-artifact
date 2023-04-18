@@ -45,7 +45,7 @@ In order to display the content of the generated notebook (as a json file), foll
 
 To stop the project use the commande `./stop.sh`
 
-# Run and stop via full installation (Only on unix installation)
+# Run and stop via full installation (Only on linux installation)
 
 ## Dependencies
 
