@@ -13,3 +13,8 @@ class Configuration(BaseModel):
     """
 
     config: str
+
+
+class CloneDTO(BaseModel):
+    config: str
+    clone: str

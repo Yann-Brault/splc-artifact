@@ -1,0 +1,25 @@
+{
+  "metadata": {
+    "last_generation": "2023-04-19",
+    "experiments_count": 2,
+    "notebook_count": 2
+  },
+  "experiments": {
+    "XP1_motor_vibration_acquisitionError": {
+      "path": "./static/illustration_test_cases/assets/experiments/XP1_motor_vibration_acquisitionError",
+      "notebook": "./static/illustration_test_cases/assets/experiment_notebooks/NB1_motor_vibration_acquisitionError.ipynb"
+    },
+    "XP2_Electrical_Engine_sound_anomaly_detection": {
+      "path": "./static/illustration_test_cases/assets/experiments/XP2_Electrical_Engine_sound_anomaly_detection",
+      "notebook": "./static/illustration_test_cases/assets/experiment_notebooks/NB2_electrical_engine_sound_anomalyDetection.ipynb"
+    }
+  },
+  "notebooks": {
+    "NB1_motor_vibration_acquisitionError": {
+      "path": "./static/illustration_test_cases/assets/experiment_notebooks/NB1_motor_vibration_acquisitionError.ipynb"
+    },
+    "NB2_electrical_engine_sound_anomalyDetection": {
+      "path": "./static/illustration_test_cases/assets/experiment_notebooks/NB2_electrical_engine_sound_anomalyDetection.ipynb"
+    }
+  }
+}

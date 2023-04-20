@@ -69,6 +69,7 @@ function reInitConfigurator(xml, UIAnnotations) {
   );
 }
 
+//étape 2
 function resetConfiguratorToNewFM(UIAnnotations) {
   if (window.app == null) {
     initializeConfiguratorApp(UIAnnotations);
@@ -79,6 +80,8 @@ function resetConfiguratorToNewFM(UIAnnotations) {
   return window.app;
 }
 
+// point d'entrée de tout, un click de ce bouton lance tout
+// étape 1: click sur ce bouton
 btn_fmload.addEventListener("click", function () {
   try {
     activatedFeatures = [];

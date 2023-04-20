@@ -1,4 +1,7 @@
 import json
+import logging
+import os
+import shutil
 
 import xmltodict
 from fastapi import APIRouter
@@ -7,10 +10,17 @@ from fastapi.responses import FileResponse
 from app.generator.generator import NbGenerator
 
 from .models import Configuration
+from .models import CloneDTO
 
-FEATURES_MAP_PATH = './static/maps/featuresMap.json'
-NOTEBOOKS_DIR_PATH = './static/Notebooks'
-CONFIG_TEMPLATE_PATH = './static/configurationTemplate.json'
+FEATURES_MAP_PATH = './static/maps/ml_components_map.json'
+EXP_DIR_PATH = "./static/illustration_test_cases/assets/experiments"
+EXP_NB_DIR_PATH = "./static/illustration_test_cases/assets/experiment_notebooks"
+EXP_MAP_PATH = "./static/maps/experiments_map.json"
+NOTEBOOKS_DIR_PATH = './static/generated_notebooks'
+CONFIG_TEMPLATE_PATH = './static/configuration_template.json'
+CLONE_PROJECT_PATH = './static/illustration_test_cases/cloned_projects'
+
+logging.basicConfig(level=logging.DEBUG)
 
 features_map = None
 with open(FEATURES_MAP_PATH, 'r') as file:
@@ -155,9 +165,6 @@ async def generate(payload: Configuration):
     to_generate = fit_for_generator(config)
     generator = NbGenerator(to_generate)
     generator.generate(f'{NOTEBOOKS_DIR_PATH}/experiment_notebook.ipynb')
-    # subprocess.run(['sh', './spawner.sh'])
-    # url = 'http://localhost:5000/config/redirect'
-    # return FileResponse(path=f'{NOTEBOOKS_DIR_PATH}/test_download.ipynb', media_type="application/octet-stream")
     return {"message": "notebook experiment_notebook generated"}
 
 
@@ -166,6 +173,42 @@ async def download():
     return FileResponse(path=f'{NOTEBOOKS_DIR_PATH}/experiment_notebook.ipynb', media_type="application/octet-stream")
 
 
-# @ configurator_router.get("/config/redirect")
-# async def redirect():
-#     return RedirectResponse("http://localhost:5390/lab")
+@ configurator_router.post("/clone")
+async def clone(payload: CloneDTO):
+    str_config = payload.config
+    clone_name = payload.clone
+    dir_path = f'{CLONE_PROJECT_PATH}/{clone_name}_clone'
+    logging.debug(f"clone name: {clone_name}")
+    logging.debug(f'directory path: {dir_path}')
+    try:
+        os.mkdir(dir_path)
+    except OSError as error:
+        print(error)
+
+    with open(f'{dir_path}/current_config.xml', 'w') as f:
+        f.write(str_config)
+
+    with open(EXP_MAP_PATH, 'r') as file:
+            exp_nb_map = json.load(file)
+
+    if clone_name.startswith('NB'):
+        logging.info("clone is a notebook")
+        if clone_name in exp_nb_map['notebooks'].keys():
+            shutil.copyfile(exp_nb_map['notebooks'][f'{clone_name}']['path'], f'{dir_path}/{clone_name}_clone.ipynb')
+
+    elif clone_name.startswith('XP'):
+        logging.info('clone is an xp')
+        logging.debug(exp_nb_map['experiments'].keys())
+        if clone_name in exp_nb_map['experiments'].keys():
+            logging.info('clone name is valid')
+            logging.debug(f"dir src path: {exp_nb_map['experiments'][f'{clone_name}']['path']}")
+            logging.debug(f"dir dst path: {dir_path}/{clone_name}")
+            logging.debug(f"nb src path: {exp_nb_map['experiments'][f'{clone_name}']['notebook']}")
+            logging.debug(f"nb dst path: {dir_path}/{clone_name}/notebook.ipynb")
+            shutil.copytree(exp_nb_map['experiments'][f'{clone_name}']['path'], f'{dir_path}/{clone_name}_clone')
+            shutil.copyfile(exp_nb_map['experiments'][f'{clone_name}']['notebook'], f'{dir_path}/{clone_name}/notebook_clone.ipynb')
+
+    zip_name = shutil.make_archive(dir_path, 'zip', CLONE_PROJECT_PATH, clone_name)
+    logging.info(zip_name)
+    return FileResponse(path=f'{zip_name}', media_type="application/octet-stream")
+

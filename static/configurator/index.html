@@ -156,6 +156,16 @@
     <h1>Past Applications</h1>
     <p>You can choose past experiments to speed up the setup </p>
     <div id="ApplicationSub"></div>
+    <div id="clone_form">
+        <form id="cloning">
+            <label for="data">Choose an option to clone:</label>
+            <select name="clone options" id="select_clone">
+                <option value="">-- Select an option --</option>
+            </select>
+            <br>
+            <input type="button" id="clone_btn" value="Clone" />
+        </form>
+    </div>
 </div>
 <div id="SourcesSection" class="tabcontent">
     <h1>Sources</h1>
@@ -201,6 +211,9 @@
 
 <!-- Checkboxes status-->
 <script src="./scripts/change-status.js"></script>
+
+<!-- Generate form select content and clone request -->
+<script src="./scripts/clone-form-manager.js"></script>
 
 
 </html>
