@@ -1,385 +1,100 @@
 {
   "metadata": {
-    "last_generation": "2023-04-12",
-    "features_count": 75,
-    "know_count": 17,
-    "unkonwn_count": 52
+    "last_generation": "2023-04-21",
+    "features_count": 18,
+    "know_count": 7,
+    "unkonwn_count": 10
   },
   "features": {
-    "MissingAlgoArtifacts": {
-      "known": true,
-      "dir": "Templating",
-      "path": "./static/artifacts_library/Templating/MissingAlgoArtifacts.json"
-    },
-    "MissingMetricsArtifacts": {
-      "known": true,
-      "dir": "Templating",
-      "path": "./static/artifacts_library/Templating/MissingMetricsArtifacts.json"
-    },
-    "MissingDataArtifacts": {
-      "known": true,
-      "dir": "Templating",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "RobustScaler": {
-      "known": true,
-      "dir": "Normalization",
-      "path": "./static/artifacts_library/Normalization/RobustScaler.json"
-    },
-    "MinMaxScaler": {
-      "known": true,
-      "dir": "Normalization",
-      "path": "./static/artifacts_library/Normalization/MinMaxScaler.json"
-    },
-    "StandardScaler": {
-      "known": true,
-      "dir": "Normalization",
-      "path": "./static/artifacts_library/Normalization/StandardScaler.json"
-    },
-    "OneHotEncoding": {
-      "known": true,
-      "dir": "Transformation",
-      "path": "./static/artifacts_library/Transformation/OneHotEncoding.json"
-    },
-    "rnn": {
-      "known": true,
-      "dir": "NN",
-      "path": "./static/artifacts_library/NN/rnn.json"
-    },
-    "ROC_curve": {
-      "known": true,
-      "dir": "Metrics",
-      "path": "./static/artifacts_library/Metrics/ROC_curve.json"
-    },
-    "Recall": {
-      "known": true,
-      "dir": "Metrics",
-      "path": "./static/artifacts_library/Metrics/Recall.json"
-    },
-    "Precision": {
-      "known": true,
-      "dir": "Metrics",
-      "path": "./static/artifacts_library/Metrics/Precision.json"
-    },
-    "Fscore": {
-      "known": true,
-      "dir": "Metrics",
-      "path": "./static/artifacts_library/Metrics/Fscore.json"
-    },
-    "VarianceThreshold": {
-      "known": true,
-      "dir": "FeatureEngineering",
-      "path": "./static/artifacts_library/FeatureEngineering/VarianceThreshold.json"
-    },
-    "PCA95": {
-      "known": true,
-      "dir": "FeatureEngineering",
-      "path": "./static/artifacts_library/FeatureEngineering/PCA95.json"
-    },
     "IsolationForest": {
       "known": true,
-      "dir": "Algo",
-      "path": "./static/artifacts_library/Algo/IsolationForest.json"
-    },
-    "KNN": {
-      "known": true,
-      "dir": "Algo",
-      "path": "./static/artifacts_library/Algo/KNN.json"
+      "dir": "algorithms",
+      "path": "./static/illustration_test_cases/assets/code_artifacts/algorithms/IsolationForest.json"
     },
     "SVM": {
       "known": true,
-      "dir": "Algo",
-      "path": "./static/artifacts_library/Algo/SVM.json"
-    },
-    "NaiveBayes": {
-      "known": true,
-      "dir": "Algo",
-      "path": "./static/artifacts_library/Algo/NaiveBayes.json"
+      "dir": "algorithms",
+      "path": "./static/illustration_test_cases/assets/code_artifacts/algorithms/SVM.json"
     },
     "OCSVM": {
       "known": true,
-      "dir": "Algo",
-      "path": "./static/artifacts_library/Algo/OCSVM.json"
+      "dir": "algorithms",
+      "path": "./static/illustration_test_cases/assets/code_artifacts/algorithms/OCSVM.json"
     },
     "RandomForest": {
       "known": true,
-      "dir": "Algo",
-      "path": "./static/artifacts_library/Algo/RandomForest.json"
+      "dir": "algorithms",
+      "path": "./static/illustration_test_cases/assets/code_artifacts/algorithms/RandomForest.json"
     },
-    "MLP": {
+    "RobustScaler": {
       "known": true,
-      "dir": "Algo",
-      "path": "./static/artifacts_library/Algo/MLP.json"
+      "dir": "preprocessings",
+      "path": "./static/illustration_test_cases/assets/code_artifacts/preprocessings/RobustScaler.json"
     },
-    "Smote": {
+    "MinMaxScaler": {
       "known": true,
-      "dir": "Augmentation",
-      "path": "./static/artifacts_library/Augmentation/Smote.json"
+      "dir": "preprocessings",
+      "path": "./static/illustration_test_cases/assets/code_artifacts/preprocessings/MinMaxScaler.json"
     },
-    "kfold": {
+    "StandardScaler": {
       "known": true,
-      "dir": "Evaluation",
-      "path": "./static/artifacts_library/Evaluation/kfold.json"
+      "dir": "preprocessings",
+      "path": "./static/illustration_test_cases/assets/code_artifacts/preprocessings/StandardScaler.json"
     },
-    "LSTMAE": {
+    "MissingDataArtifacts": {
+      "known": true,
+      "dir": "template",
+      "path": "./static/illustration_test_cases/assets/code_artifacts/template/MissingDataArtifacts.json"
+    },
+    "augmentation": {
       "known": false,
       "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
+      "path": "./static/illustration_test_cases/assets/code_artifacts/template/MissingDataArtifacts.json"
     },
-    "AutoEncoder": {
+    "Decimation": {
       "known": false,
       "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
+      "path": "./static/illustration_test_cases/assets/code_artifacts/template/MissingDataArtifacts.json"
     },
-    "Resnet": {
+    "removal": {
       "known": false,
       "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
+      "path": "./static/illustration_test_cases/assets/code_artifacts/template/MissingDataArtifacts.json"
+    },
+    "CNNAE": {
+      "known": false,
+      "dir": "Unknown",
+      "path": "./static/illustration_test_cases/assets/code_artifacts/template/MissingDataArtifacts.json"
     },
     "CNN": {
       "known": false,
       "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
+      "path": "./static/illustration_test_cases/assets/code_artifacts/template/MissingDataArtifacts.json"
     },
-    "LSTM": {
+    "ResNet": {
       "known": false,
       "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
+      "path": "./static/illustration_test_cases/assets/code_artifacts/template/MissingDataArtifacts.json"
     },
-    "EfficientNet": {
+    "LSTMAE": {
       "known": false,
       "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
+      "path": "./static/illustration_test_cases/assets/code_artifacts/template/MissingDataArtifacts.json"
     },
-    "FastRollingSTd": {
+    "AE": {
       "known": false,
       "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
+      "path": "./static/illustration_test_cases/assets/code_artifacts/template/MissingDataArtifacts.json"
     },
-    "PieceWiseRegression": {
+    "decisionTree": {
       "known": false,
       "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
+      "path": "./static/illustration_test_cases/assets/code_artifacts/template/MissingDataArtifacts.json"
     },
-    "autoThreshold": {
+    "QuantizeNN": {
       "known": false,
       "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "DecisionTree": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "AutoPytorch": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "AutoKeras": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "GaussianNaiveBayes": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "LogisticRegression": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "MAE": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "MSE": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "maxReconstructionTrain": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "ZscoreThreshold": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "ReconstructionApproach": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "DownSampling": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "FrontFill": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "BackFill": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "SimpleImputer": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "PCA98": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "explicitFeatureCompute": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "ComputeFeatures": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "MultiVariedTrueToFalse": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "torchaudioResample": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "mean": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "cutting": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "padding": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "MelSpectrogram": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "FFT": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "STFT": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "Derivative1": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "derivative2": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "derivative3": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "GrammianAngularField": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "MarkovTransforamationField": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "AA2dReshaping": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "toUCR_format": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "fromUCR_format": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "MCC": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "Inference_time": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "inference_RAM": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "Training_time": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "Training_RAM": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "ADDM": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "ADWIN": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "KSWIN": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "PageHinkley": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
-    },
-    "DDM": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/artifacts_library/Templating/MissingDataArtifacts.json"
+      "path": "./static/illustration_test_cases/assets/code_artifacts/template/MissingDataArtifacts.json"
     }
   }
 }

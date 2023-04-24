@@ -6,7 +6,15 @@ This protocol is only about reproducing the feature selection process.
 
 Other files are here to help you reproduce the problem configuration as a whole.
 
-**Disclaimer** : We assume from here that you are running the project with Docker as explained in the README file.
+**Disclaimer** : We assume from here that you are running the project with Docker as explained in the [README file](https://anonymous.4open.science/r/splc-artifact-files/README.md).
+
+Checkboxes rule :
+
+- One click to select / enable
+- two clicks to deselect / disable
+- Three clicks (total) to reset a checkbox
+
+If a checkbox is grey (see image), it has been automatically enabled or disabled by the system due to constraint propagation.
 
 ## Protocol
 

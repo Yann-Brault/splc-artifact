@@ -41,7 +41,7 @@ class Mapper:
 
         # self.dir = 'artifacts-library'
         # self.file_extension = '.json'
-        self.features_map_path = './static/maps/featuresMap.json'
+        self.features_map_path = './static/maps/ml_components_map.json'
         self.artifact = None
 
     # def complete_path(self, pseudo_path: str):
