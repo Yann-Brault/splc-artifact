@@ -17,6 +17,8 @@ If a checkbox is grey (see image), it has been automatically enabled or disabled
 - auto enable ![auto enable](../assets/all/auto_enable.png)
 - auto disable ![auto disable](../assets/all/auto_disable.png)
 
+Dataset used in notebooks are **not** given into project zip. This is due to a very limited storage space on the anonymization system. Therefore notebooks **cannot** be executed.
+
 ## Protocol
 
 ### Run the projet
@@ -57,7 +59,7 @@ This area is present across all tabs because it keeps track of all automatically
 
 ##### Step 1 of scenario 5.2 unfolding
 
-6. SInce you are in the tab _Initial Data_, you can select, with one click on the checkbox, the **TimeSeries** option and **PartiallyLabelled** option. Then you can disable **NormalizedData** by double clicking on the checkbox.
+6. Since you are in the tab _Initial Data_, you can select, with one click on the checkbox, the **TimeSeries** option and **PartiallyLabelled** option. Then you can disable **NormalizedData** by double clicking on the checkbox.
 
 You should have this result:
 
@@ -131,3 +133,7 @@ Finally you can click on the button _clone_.
 This should trigger the download of the notebook as a **zip file**. Depending on your browser settings, you might be asked where you want to save the file. Save it where it will be easy for you to find it.
 
 You can compare both notebooks to assert that they are similar except for the new ML component, the **QuantizeNN**.
+
+### End
+
+This is the end of this reproduce tutorial. You can open notebooks in order to check their construction but they are not executable as it is specified at the beginning of this document.

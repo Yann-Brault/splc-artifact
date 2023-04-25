@@ -17,6 +17,8 @@ If a checkbox is grey (see image), it has been automatically enabled or disabled
 - auto enable ![auto enable](../assets/all/auto_enable.png)
 - auto disable ![auto disable](../assets/all/auto_disable.png)
 
+Dataset used in notebooks are **not** given into project zip. This is due to a very limited storage space on the anonymization system. Therefore notebooks **cannot** be executed.
+
 ## Protocol
 
 ### Run the projet
@@ -96,3 +98,7 @@ Once you have unzip the project, you should have a directory with this file stru
 
 You should have a directory called _XP2_electrical_engine_sound_anomaly_detection_ and a file _current_config.xml_. This xml file is the configuration that you just realized through this tutorial.
 In the directory, you will find the notebook file, _notebook.ipynb_ and the configuration file of this project, _XP2_config.xml_.
+
+### End
+
+This is the end of this reproduce tutorial. You can open notebooks in order to check their construction but they are not executable as it is specified at the beginning of this document.
