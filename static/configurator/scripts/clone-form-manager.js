@@ -1,8 +1,9 @@
 const select = document.getElementById("select_clone");
+const generate = document.getElementById("btn-fmload");
 const clone_btn = document.getElementById("clone_btn");
 const clonable = [];
 
-select.addEventListener("click", async () => {
+generate.addEventListener("click", async () => {
   // get configuration data
   const config = window.app.configuration;
   // console.log(config.model.features);
