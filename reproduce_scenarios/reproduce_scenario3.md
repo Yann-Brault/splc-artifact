@@ -118,7 +118,7 @@ You should see this on your screen:
 
 ### End
 
-This is the end of this reproduce tutorial. You can open notebooks in order to check their construction but they are not executable as it is specified at the beginning of this document.
+You can open notebooks in order to check their construction but they are not executable as it is specified at the beginning of this document.
 
 ### Conclusion
 
