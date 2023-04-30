@@ -1,7 +1,7 @@
 # About
 
-The goal is for you to reproduce the scenario depicted in the _section 5.2_ of the article.
-
+The goal is for you to reproduce the scenario depicted in the _section 5.3_ of the article.
+With this scenario, we aim to evaluate how our approach, through its configuration and generation capabilities, helps the user to compose a solution that experiments only partially cover.
 Detailed steps are given to you in order to replicate each step of the scenario.
 
 **Disclaimer** : We assume from here that you are running the project with Docker as explained in the [README file](https://anonymous.4open.science/r/splc-artifact-files/README.md).
@@ -141,3 +141,7 @@ You can compare both notebooks to assert that they are similar except for the ne
 ### End
 
 You can open notebooks in order to check their construction but they are not executable as it is specified at the beginning of this document.
+
+### Conclusion
+
+So with this scenario, you have benn able to retrieve several past notebooks, and reuse one by adding a new feature in order to generate a new notebook that well suits your problem. You were also capable to clone the reused product to compare it with the new notebook.

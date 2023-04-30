@@ -1,6 +1,7 @@
 # About
 
 The goal is for you to reproduce the scenario 1 depicted in the _section 5.2_ of the article.
+With this scenario, we want to evaluate how our approach differentiate itself from a keyword-based search.
 
 Detailed steps are given to you in order to replicate each step of the scenario.
 
@@ -113,3 +114,7 @@ In the directory, you will find the notebook file, _notebook.ipynb_ and the conf
 ### End
 
 This is the end of this reproduce tutorial. You can open notebooks in order to check their construction but they are not executable as it is specified at the beginning of this document.
+
+### Conclusion
+
+So with this scenario, You have been able to retrieve several past experiments and notebooks by giving to the system your configuration. Thanks to the constraints model you were able to clone one that match your problem.

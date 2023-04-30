@@ -1,6 +1,7 @@
 # About
 
-The goal is for you to reproduce the scenario depicted in the _section 5.3_ of the article.
+The goal is for you to reproduce the scenario depicted in the _section 5.4_ of the article.
+With this scenario, we want to evaluate the correctness of the generative process, from the proposed code artifacts to the generated Notebook, focusing on the scenario where no previous experiment or solution is available after the configuration process.
 
 Detailed steps are given to you in order to replicate each step of the scenario.
 
@@ -118,3 +119,7 @@ You should see this on your screen:
 ### End
 
 This is the end of this reproduce tutorial. You can open notebooks in order to check their construction but they are not executable as it is specified at the beginning of this document.
+
+### Conclusion
+
+So with this scenario, you have not been able to retrieve past experiments that matched your configuration. Then you decided to conduct a generative process by picking ML artifacts, in a list of configuration-suitable features. You were able to generate several notebooks in order to test different algorithms.
