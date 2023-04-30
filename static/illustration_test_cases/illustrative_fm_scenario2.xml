@@ -29,8 +29,8 @@
 			<and abstract="true" name="InitialData">
 				<graphics key="collapsed" value="true"/>
 				<alt abstract="true" name="LabelsAvailability">
-					<feature name="FullyLabeled"/>
-					<feature name="PartiallyLabeled"/>
+					<feature name="FullyLabelled"/>
+					<feature name="PartiallyLabelled"/>
 					<feature name="Unlabelled"/>
 				</alt>
 				<alt abstract="true" name="DataType">
@@ -82,8 +82,8 @@
 			<and abstract="true" name="states">
 				<graphics key="collapsed" value="true"/>
 				<alt abstract="true" name="LabelsAvailabilityState">
-					<feature name="FullyLabeledState"/>
-					<feature name="PartiallyLabeledState"/>
+					<feature name="FullyLabelledState"/>
+					<feature name="PartiallyLabelledState"/>
 					<feature name="UnlabelledState"/>
 				</alt>
 				<alt abstract="true" name="DataTypeState">
@@ -100,24 +100,24 @@
 					<feature name="DS1_motor_vibration_acquisition_error"/>
 					<feature name="DS2_electrical_engine_sound_anomaly_detection"/>
 					<feature name="DS3_motor_vibrations_bearing_defect"/>
-					<feature name="DS4_washing_machine_engine"/>
-					<feature name="wafer_manufacturing_DS"/>
+					<!-- <feature name="DS4_washing_machine_engine"/>
+					<feature name="wafer_manufacturing_DS"/> -->
 				</and>
 				<and abstract="true" name="XP">
 					<graphics key="collapsed" value="false"/>
 					<feature name="XP1_motor_vibration_acquisition_error"/>
 					<feature name="XP2_electrical_engine_sound_anomaly_detection"/>
 					<feature name="XP3_motor_vibrations_bearing_defect"/>
-					<feature name="XP4_washing_machine_engine_defect"/>
-					<feature name="Wafer_manufacturing_anomaly_detection_APP"/>
+					<!-- <feature name="XP4_washing_machine_engine_defect"/>
+					<feature name="Wafer_manufacturing_anomaly_detection_APP"/> -->
 				</and>
 				<and abstract="true" name="Notebooks">
 					<graphics key="collapsed" value="false"/>
 					<feature name="NB1_motor_vibration_acquisition_error"/>
 					<feature name="NB2_electrical_engine_sound_anomaly_detection"/>
 					<feature name="NB3_motor_vibrations_bearing_defect"/>
-					<feature name="washing_machine_defect_NB"/>
-					<feature name="wafer_manufacturing_anomaly_detection_NB"/>
+					<!-- <feature name="washing_machine_defect_NB"/>
+					<feature name="wafer_manufacturing_anomaly_detection_NB"/> -->
 				</and>
 			</and>
 		</and>
@@ -134,7 +134,7 @@
 				<var>CNN</var>
 				<conj>
 					<var>ImagesState</var>
-					<var>FullyLabeledState</var>
+					<var>FullyLabelledState</var>
 				</conj>
 			</imp>
 		</rule>
@@ -143,7 +143,7 @@
 				<var>ResNet</var>
 				<conj>
 					<var>ImagesState</var>
-					<var>FullyLabeledState</var>
+					<var>FullyLabelledState</var>
 				</conj>
 			</imp>
 		</rule>
@@ -201,11 +201,11 @@
 		</rule>
 		<rule>
 			<imp>
-				<var>FullyLabeledState</var>
+				<var>FullyLabelledState</var>
 				<disj>
-					<var>FullyLabeled</var>
+					<var>FullyLabelled</var>
 					<conj>
-						<var>PartiallyLabeled</var>
+						<var>PartiallyLabelled</var>
 						<var>augmentation</var>
 					</conj>
 				</disj>
@@ -217,8 +217,8 @@
 				<disj>
 					<conj>
 						<disj>
-							<var>FullyLabeled</var>
-							<var>PartiallyLabeled</var>
+							<var>FullyLabelled</var>
+							<var>PartiallyLabelled</var>
 						</disj>
 						<var>removal</var>
 					</conj>
@@ -228,11 +228,11 @@
 		</rule>
 		<rule>
 			<imp>
-				<var>PartiallyLabeledState</var>
+				<var>PartiallyLabelledState</var>
 				<disj>
-					<var>PartiallyLabeled</var>
+					<var>PartiallyLabelled</var>
 					<conj>
-						<var>FullyLabeled</var>
+						<var>FullyLabelled</var>
 						<var>Decimation</var>
 					</conj>
 				</disj>
@@ -307,7 +307,7 @@
 		<rule>
 			<imp>
 				<var>DS2_electrical_engine_sound_anomaly_detection</var>
-				<var>PartiallyLabeled</var>
+				<var>PartiallyLabelled</var>
 			</imp>
 		</rule>
 		<rule>
@@ -369,7 +369,7 @@
 		<rule>
 			<imp>
 				<var>DS3_motor_vibrations_bearing_defect</var>
-				<var>PartiallyLabeled</var>
+				<var>PartiallyLabelled</var>
 			</imp>
 		</rule>
 		<rule>
@@ -416,10 +416,10 @@
 				<var>NB3_motor_vibrations_bearing_defect</var>
 			</imp>
 		</rule>
-		<rule>
+		<!-- <rule>
 			<imp>
 				<var>DS4_washing_machine_engine</var>
-				<var>PartiallyLabeled</var>
+				<var>PartiallyLabelled</var>
 			</imp>
 		</rule>
 		<rule>
@@ -505,7 +505,7 @@
 		<rule>
 			<imp>
 				<var>wafer_manufacturing_DS</var>
-				<var>FullyLabeled</var>
+				<var>FullyLabelled</var>
 			</imp>
 		</rule>
 		<rule>
@@ -521,7 +521,7 @@
 					<var>NormalizedData</var>
 				</not>
 			</imp>
-		</rule>
+		</rule> -->
 		<rule>
 			<imp>
 				<var>XP2_electrical_engine_sound_anomaly_detection</var>
@@ -534,12 +534,12 @@
 				<var>DS3_motor_vibrations_bearing_defect</var>
 			</imp>
 		</rule>
-		<rule>
+		<!-- <rule>
 			<imp>
 				<var>XP4_washing_machine_engine_defect</var>
 				<var>DS4_washing_machine_engine</var>
 			</imp>
-		</rule>
+		</rule> -->
 		<rule>
 			<imp>
 				<var>XP2_electrical_engine_sound_anomaly_detection</var>
