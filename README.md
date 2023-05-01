@@ -1,6 +1,9 @@
 # splc-artifact
 
-software artifact for splc 2023
+Reproduction package for SPLC 2023
+
+The project has been develop on Linux.
+It has been tested on different OS: Linux (Ubuntu 22.04) and MacOS. It has also been tested on several web navigator: Firefox and Chrome.
 
 # Run and stop the project on Docker
 
@@ -18,28 +21,15 @@ To run the projet use the command `./start.sh`
 If the container is up and running you should see a similar output:
 
 ```
-CONTAINER ID   IMAGE           COMMAND                  CREATED        STATUS                  PORTS                                       NAMES
-947476ba0e59   splc-artifact   "uvicorn app.main:ap…"   1 second ago   Up Less than a second   0.0.0.0:5050->5000/tcp, :::5050->5000/tcp   splc-application
+CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES
+
+947476ba0e59 splc-artifact "uvicorn app.main:ap…" 1 second ago Up Less than a second 0.0.0.0:5050->5000/tcp, :::5050->5000/tcp splc-application
+
 ```
 
-Go to this [link](http://localhost:5050/) and click the button in order to generate the notebook.
+Application is running at this [link](http://localhost:5050/)
 
-Notebook is generated in the file system of the docker container.
-In order to display the content of the generated notebook (as a json file), follow these steps:
-
-- Go into a terminal
-- Execute this command `docker exec -it splc-application sh`
-- you will see a prompt like this `/code # `
-- you can now execute classic shell commands
-- So if you use `ls` you will be able to see the container file system
-- The output of this command is:
-  - app/
-  - static/
-  - requirements.txt
-  - hello_world.ipynb (if you have generated the notebook)
-- To display the content as a json file, execute the command `cat hello_world.ipynb`
-- You can look for the "cells" key that is a list of all cells composing the document
-- execute `exit` to quit the container shell
+You can find information about reproduction scenarios further down on this document.
 
 ## To stop
 
@@ -63,16 +53,13 @@ It will install :
 - [pydantic](https://docs.pydantic.dev/)
 - [uvicorn](https://www.uvicorn.org/)
 - [nbformat](https://github.com/jupyter/nbformat)
+- [xmltodict](https://pypi.org/project/xmltodict/)
 
 Then run the command `uvicorn app.main:app --port 5000 --host 0.0.0.0`
 
-This will launch a server and make the app accessible at adress `http://localhost:5000/`
+This will launch a server and make the app running [here](http://localhost:5000/)
 
 Feel free to modify the port.
-
-Go to the given address and click the button to generate the notebook.
-
-The notebook is generated at the root of the projet directory.
 
 ## To stop
 

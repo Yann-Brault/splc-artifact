@@ -55,13 +55,9 @@ You are now in the configuration process.
 
 You should now see this on your screen :
 
-![Valid and incomplete](../assets/reproduce/valid_incomplete.png) **To change**
+![Valid and incomplete](../assets/reproduce/configuration_process.png)
 
-**Do not worry** about the message saying "this configuration is valid and complete".
-
-The configuration is indeed valid, this means the loading and creation of the whole constraint system is successful.
-
-This area is present across all tabs because it keeps track of all automatically selected or deselected features due to constraint propagation.
+The area at the top is present across all tabs. It keeps track of all automatically selected or deselected features due to constraint propagation.
 
 ### Unfolding the scenario : Retrieve and clone notebook
 

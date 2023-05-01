@@ -28,13 +28,15 @@ function presentGlobalProperties(configurator) {
     ? "complete"
     : "incomplete";
 
-  let html =
-    "<div class='info'>" +
-    "<h4>This configuration is " +
-    (configurator.configuration.isValid() ? "valid" : "invalid") +
-    " and " +
-    state +
-    ".</h4>";
+  // let html =
+  //   "<div class='info'>" +
+  //   "<h4>This configuration is " +
+  //   (configurator.configuration.isValid() ? "valid" : "invalid") +
+  //   " and " +
+  //   state +
+  //   ".</h4>";
+
+  let html = "<div class='info'>";
 
   //console.log("activated features ", activatedFeatures);
   dealWithConstraints(configurator, activatedFeatures, deactivatedFeatures);

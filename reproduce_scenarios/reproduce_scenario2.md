@@ -52,14 +52,9 @@ You are now in the configuration process.
 
 You should now see this on your screen :
 
-![Valid and incomplete](../assets/reproduce/valid_incomplete.png)
-**To change**
+![Valid and incomplete](../assets/reproduce/configuration_process.png)
 
-**Do not worry** about the message saying "this configuration is valid and complete".
-
-The configuration is indeed valid, this means the loading and creation of the whole constraint system is successful.
-
-This area is present across all tabs because it keeps track of all automatically selected or deselected features due to constraint propagation.
+The area at the top is present across all tabs. It keeps track of all automatically selected or deselected features due to constraint propagation.
 
 ### Unfolding the scenario: Reuse, complete and generate notebook
 
@@ -83,7 +78,7 @@ You should have this result:
 
 > If you click on tab _Solutions_ you can confirm that two ML components have been automatically disabled, **CNN** and **Resnet**, as they are not suitable for handling new anomalies in production.
 
-![solution](../assets/scenarios/scenario_2/solution_scenario2.png)
+![solution](../assets/scenarios/scenario_1/solution_scenario1.png)
 
 > If you now click on tab _Appli & Dataset_, you can confirm that **XP1** is still disabled and **XP2** and **XP3** are now disabled too. About notebooks, all are still available.
 
@@ -106,7 +101,7 @@ You should have this result:
 
 ![past appli 2](../assets/scenarios/scenario_2/past_appli2_scenario2.png)
 
-> The solution that you configured is composed of the artefacts from the **NB2** and a new artefact **QuantizeNN**.
+> The solution that you configured is composed of the artifacts from the **NB2** and a new artifact **QuantizeNN**.
 
 #### Step 5 of scenario 5.2 unfolding
 
@@ -124,6 +119,8 @@ You should see this on your screen:
 
 13. Finally, click on the _download_ button, and the notebook should be downloaded. Depending on your browser settings, you might be asked where you want to save the file. Save it where it will be easy for you to find it.
 
+> unfortunately, in order to make a light package, some ML artifacts source code were not included. The QuantizeNN is one of them, hence you will not be able to find it in the generated notebook. This will be fixed in the public artifact given for the final version.
+
 ### Extra steps
 
 You might want to download the notebook that you reused. In order to do so:
@@ -136,7 +133,7 @@ Finally you can click on the button _clone_.
 
 This should trigger the download of the notebook as a **zip file**. Depending on your browser settings, you might be asked where you want to save the file. Save it where it will be easy for you to find it.
 
-You can compare both notebooks to assert that they are similar except for the new ML artifact, the **QuantizeNN**.
+<!-- You can compare both notebooks to assert that they are similar except for the new ML artifact, the **QuantizeNN**. -->
 
 ### End
 

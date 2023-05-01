@@ -1,3 +1,11 @@
+/* @license
+elias kuiter
+feature-confirator
+v1.0.1
+https://github.com/ekuiter/feature-configurator
+License: LGPL3.0
+*/
+
 // <!-- Configuration renderer -->
 function ConfigurationRenderer(configuration, options, UIAnnotations) {
   if (!(this instanceof ConfigurationRenderer))

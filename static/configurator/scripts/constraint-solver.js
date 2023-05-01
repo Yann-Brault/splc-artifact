@@ -1,3 +1,11 @@
+/* @license
+elias kuiter
+feature-confirator
+v1.0.1
+https://github.com/ekuiter/feature-configurator
+License: LGPL3.0
+*/
+
 function ConstraintSolver(model) {
   if (!(this instanceof ConstraintSolver)) return new ConstraintSolver(model);
   var self = this;
