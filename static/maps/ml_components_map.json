@@ -1,11 +1,16 @@
 {
   "metadata": {
-    "last_generation": "2023-04-21",
+    "last_generation": "2023-05-02",
     "features_count": 18,
-    "know_count": 7,
-    "unkonwn_count": 10
+    "know_count": 10,
+    "unkonwn_count": 7
   },
   "features": {
+    "CNN": {
+      "known": true,
+      "dir": "algorithms",
+      "path": "./static/illustration_test_cases/assets/code_artifacts/algorithms/CNN.json"
+    },
     "IsolationForest": {
       "known": true,
       "dir": "algorithms",
@@ -15,6 +20,16 @@
       "known": true,
       "dir": "algorithms",
       "path": "./static/illustration_test_cases/assets/code_artifacts/algorithms/SVM.json"
+    },
+    "LSTMAE": {
+      "known": true,
+      "dir": "algorithms",
+      "path": "./static/illustration_test_cases/assets/code_artifacts/algorithms/LSTMAE.json"
+    },
+    "AE": {
+      "known": true,
+      "dir": "algorithms",
+      "path": "./static/illustration_test_cases/assets/code_artifacts/algorithms/AE.json"
     },
     "OCSVM": {
       "known": true,
@@ -66,22 +81,7 @@
       "dir": "Unknown",
       "path": "./static/illustration_test_cases/assets/code_artifacts/template/MissingDataArtifacts.json"
     },
-    "CNN": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/illustration_test_cases/assets/code_artifacts/template/MissingDataArtifacts.json"
-    },
     "ResNet": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/illustration_test_cases/assets/code_artifacts/template/MissingDataArtifacts.json"
-    },
-    "LSTMAE": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/illustration_test_cases/assets/code_artifacts/template/MissingDataArtifacts.json"
-    },
-    "AE": {
       "known": false,
       "dir": "Unknown",
       "path": "./static/illustration_test_cases/assets/code_artifacts/template/MissingDataArtifacts.json"

@@ -5,7 +5,7 @@
     "\n",
     "def CNN_classifier(input_shape):\n",
     "    model = Sequential()\n",
-    "    model.add(Conv2D(32, (3, 3)activation='relu'input_shape=input_shape))\n",
+    "    model.add(Conv2D(32, (3, 3), activation='relu', input_shape=input_shape))\n",
     "    model.add(MaxPooling2D((2, 2)))\n",
     "    model.add(Conv2D(64, (3, 3), activation='relu'))\n",
     "    model.add(MaxPooling2D((2, 2)))\n",
@@ -48,7 +48,7 @@
   ],
   "Imports": [
     "import tensorflow as tf\n",
-    "tensorflow.keras.utils import to_categorical\n",
+    "from tensorflow.keras.utils import to_categorical\n",
     "from tensorflow.keras.models import Sequential\n",
     "from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout\n"
   ]

@@ -8,7 +8,7 @@
     "    return obj.transform(x_data)\n",
     "\n",
     "transformer = RobustScaler()\n",
-    "x_train_normalized = transformer_train(transformer, x_train)"
+    "x_train = transformer_train(transformer, x_train)"
   ],
   "Valid": [
     "# Data treatment\n",
@@ -17,7 +17,7 @@
     "def transformer_valid(obj, x_data):\n",
     "    return obj.transform(x_data)\n",
     "\n",
-    "x_valid_normalized = transformer_valid(transformer, x_val)"
+    "x_valid = transformer_valid(transformer, x_valid)"
   ],
   "Test": [
     "# Data treatment\n",
@@ -26,7 +26,7 @@
     "def transformer_test(obj, x_data):\n",
     "    return obj.transform(x_data)\n",
     "\n",
-    "x_test_normalized = transformer_test(transformer, x_test)"
+    "x_test = transformer_test(transformer, x_test)"
   ],
   "Imports": ["from sklearn.preprocessing import RobustScaler\n"]
 }

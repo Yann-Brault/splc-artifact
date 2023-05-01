@@ -18,7 +18,7 @@ from dotenv import load_dotenv
 logging.basicConfig(level=logging.INFO)
 
 
-FEATURE_MODEL_PATH = './static/illustration_test_cases/illustrative_feature_model.xml'
+FEATURE_MODEL_PATH = './static/illustration_test_cases/illustrative_fm_scenario2.xml'
 FEATURES_MAP_PATH = './static/maps/ml_components_map.json'
 ARTIFACT_MAP_PATH = './static/maps/code_artifacts_map.json'
 
