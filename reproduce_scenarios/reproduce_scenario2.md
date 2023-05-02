@@ -90,10 +90,7 @@ You should have this result:
 
 ![solutionPropagated](../assets/scenarios/scenario_2/solution_propagated_scenario2.png)
 
-> Based on the current state the configuration, the constraint 5  
-> in fig. 7 rules out all the non neural networks models, and the  
-> constraint 15 fig. 7 rules out using LSTMAE because it is neural  
-> network incompatible with the quantizing.
+> The constraint 5 in fig. 7 then rules out all the non neural networks models, and the constraint 15 fig. 7 rules out LSTMAE as it is not compatible with quantizing neural network. At this stage all the experiments are ruled out, additionally the notebook NB1 is ruled out because it refers to LSTMAE.
 
 #### Step 4 of scenario 5.2 unfolding
 

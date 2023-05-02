@@ -69,7 +69,9 @@ You should have this result:
 
 ![InitialData](../assets/scenarios/scenario_1/initialData_scenario1.png)
 
-> If you click on tab _Appli & Dataset_ you can confirm that the **XP1** has been automatically disabled, but the **NB1** is still enable. As explained in the paper, this is due to the fact that **XP1** configuration is not compatible with the current one, but the notebook **NB1** however is still compatible due to the fact that the algorithm is able to deal with partially labelled data.
+> If you click on tab _Appli & Dataset_ you can confirm that the **XP1** has been automatically disabled. The given specification is sufficient to exclude Experiment XP1, which dealt with motor vibration but was performed on unlabelled data. However, this finding does not contradict the
+> associated notebook, which employs an algorithm capable of
+> handling partially labeled data.
 
 ![past application](../assets/scenarios/scenario_1/past_appli_scenario1.png)
 
