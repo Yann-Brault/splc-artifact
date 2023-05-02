@@ -1,7 +1,7 @@
 {
   "metadata": {
     "last_generation": "2023-05-02",
-    "features_count": 11
+    "features_count": 13
   },
   "features": {
     "CNN": {
@@ -29,6 +29,11 @@
       "dir": "algorithms",
       "path": "./static/illustration_test_cases/assets/code_artifacts/algorithms/AE.json"
     },
+    "ResNet": {
+      "known": true,
+      "dir": "algorithms",
+      "path": "./static/illustration_test_cases/assets/code_artifacts/algorithms/ResNet.json"
+    },
     "OCSVM": {
       "known": true,
       "dir": "algorithms",
@@ -53,6 +58,11 @@
       "known": true,
       "dir": "preprocessings",
       "path": "./static/illustration_test_cases/assets/code_artifacts/preprocessings/StandardScaler.json"
+    },
+    "QuantizeNN": {
+      "known": true,
+      "dir": "postprocessings",
+      "path": "./static/illustration_test_cases/assets/code_artifacts/postprocessings/QuantizeNN.json"
     },
     "MissingDataArtifacts": {
       "known": true,

@@ -2,8 +2,8 @@
   "metadata": {
     "last_generation": "2023-05-02",
     "features_count": 18,
-    "know_count": 10,
-    "unkonwn_count": 7
+    "know_count": 12,
+    "unkonwn_count": 5
   },
   "features": {
     "CNN": {
@@ -31,6 +31,11 @@
       "dir": "algorithms",
       "path": "./static/illustration_test_cases/assets/code_artifacts/algorithms/AE.json"
     },
+    "ResNet": {
+      "known": true,
+      "dir": "algorithms",
+      "path": "./static/illustration_test_cases/assets/code_artifacts/algorithms/ResNet.json"
+    },
     "OCSVM": {
       "known": true,
       "dir": "algorithms",
@@ -55,6 +60,11 @@
       "known": true,
       "dir": "preprocessings",
       "path": "./static/illustration_test_cases/assets/code_artifacts/preprocessings/StandardScaler.json"
+    },
+    "QuantizeNN": {
+      "known": true,
+      "dir": "postprocessings",
+      "path": "./static/illustration_test_cases/assets/code_artifacts/postprocessings/QuantizeNN.json"
     },
     "MissingDataArtifacts": {
       "known": true,
@@ -81,17 +91,7 @@
       "dir": "Unknown",
       "path": "./static/illustration_test_cases/assets/code_artifacts/template/MissingDataArtifacts.json"
     },
-    "ResNet": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/illustration_test_cases/assets/code_artifacts/template/MissingDataArtifacts.json"
-    },
     "decisionTree": {
-      "known": false,
-      "dir": "Unknown",
-      "path": "./static/illustration_test_cases/assets/code_artifacts/template/MissingDataArtifacts.json"
-    },
-    "QuantizeNN": {
       "known": false,
       "dir": "Unknown",
       "path": "./static/illustration_test_cases/assets/code_artifacts/template/MissingDataArtifacts.json"
