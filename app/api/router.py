@@ -175,6 +175,8 @@ async def generate(payload: Configuration):
     to_generate = fit_for_generator(config)
     logging.debug(f'config to generate: {to_generate}')
     generator = NbGenerator(to_generate)
+    if not os.path.exists(NOTEBOOKS_DIR_PATH):
+        os.mkdir(NOTEBOOKS_DIR_PATH)
     generator.generate(f'{NOTEBOOKS_DIR_PATH}/experiment_notebook.ipynb')
     return {"message": "notebook experiment_notebook generated"}
 
