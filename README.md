@@ -10,26 +10,25 @@ Reproduction package for SPLC 2023
 The code in this package constructs and executes the tool to use our approach. To reproduce scenarios depicted in the paper, guidelines are to find in the directory _reproduce_scenarios_. In this directory, there are three different files (one for each scenario).
 The replicator should expect the tool to run in less than 5 minutes if she has a working Docker setup. Each scenario can be replicated in less than 15 minutes.
 
-As the technology used to make the package anonymous does not support archive download, the replicator can find a second anonymous repository at this [link](https://anonymous.4open.science/r/splc-artifact-zip/README.md) that contains an archive file of the present repository.
-
 ## Data Availability and Provenance Statements
 
-Due to very restricted storage space for anonymous repositories, the datasets are not included in the reproduction package and notebooks are not executable. Datasets will be available in a Zenodo public reproduction package if the paper is accepted.
+  ##### TODO
 
-## Computational requirements
+## Requirements
 
 ### Software Requirements
 
-- Run within a container:
+- Bash scripts execution (Linux, Mac Os, git bash, etc.).
+- For running it as a container:
   - Docker (code was run with Docker 23.0.5)
   - Docker compose
-- Run directly on computer:
+- For running it directly on a computer:
   - Python (Python 3.8 at least, artifact was developed on Python 3.10)
   - Pip
-- Web navigator:
-  - Firefox or Chrome (both have been tested and are compatible)
 
-Be aware that artifact execution is based on bash scripts execution.
+ For the configuration steps, the requirements are as follows:
+– a Web browser, being Firefox or Chrome (both have been tested and are
+compatible).
 
 _The artifact has been developed on Linux Ubuntu 22.04. It also has been tested on the same version of Ubuntu and on an Apple machine with Apple Silicon chip._
 
