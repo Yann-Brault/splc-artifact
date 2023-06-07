@@ -1,5 +1,9 @@
 # splc-artifact
 
+
+
+[![DOI](https://zenodo.org/badge/627923302.svg)](https://zenodo.org/badge/latestdoi/627923302)
+
 Reproduction package for SPLC 2023
 
 The project has been develop on Linux.
