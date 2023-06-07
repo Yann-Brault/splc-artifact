@@ -1,6 +1,11 @@
 # splc23-taming-diversity-artifact
 
+[![DOI](https://zenodo.org/badge/627923302.svg)](https://zenodo.org/badge/latestdoi/627923302)
+
+Reproduction package for SPLC 2023
+
 ## Overview
+
 
 The code in this package constructs and executes the tool to use our approach. To reproduce scenarios depicted in the paper, guidelines are to find in the directory _reproduce_scenarios_. In this directory, there are three different files (one for each scenario).
 The replicator should expect the tool to run in less than 5 minutes if she has a working Docker setup. Each scenario can be replicated in less than 15 minutes.
