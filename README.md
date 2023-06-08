@@ -46,7 +46,7 @@ _The artifact has been developed on Linux Ubuntu 22.04. It also has been tested 
 
 ### License for Code
 
-The code is licensed under a LGPL License. See [LICENSE](https://anonymous.4open.science/r/splc-artifact-files/LICENSE) for details.
+The code is licensed under a LGPL License. See [LICENSE](https://github.com/Yann-Brault/splc-artifact/blob/main/LICENSE) for details.
 
 ## Instructions to Replicators
 
