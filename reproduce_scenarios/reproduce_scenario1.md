@@ -1,6 +1,6 @@
 # Overview
 
-The goal is for you to reproduce the scenario 1 depicted in the _section 5.2_ of the article.
+The goal is for you to reproduce the scenario 1 depicted in the _section 5.2_ of the article (research paper id: 8212 associated with the artifact guidelines).
 With this scenario, we want to evaluate how our approach differentiate itself from a keyword-based search.
 
 Detailed steps are given to you in order to replicate each step of the scenario.
@@ -25,7 +25,7 @@ If a checkbox is grey (see image), it has been automatically checked or disabled
 
 ## Data
 
-Due to very restricted storage space for anonymous repositories, the datasets **are not** included in the reproduction package and notebooks **are not** executable. Datasets will be available in a Zenodo public reproduction package if the paper is accepted.
+Data to reproduce the experience will be given when cloning the experience.
 
 ## Protocol
 
@@ -43,7 +43,7 @@ You will see this web page:
 
 **The web page must be reloaded between each scenario**
 
-3. In the section _Feature Model Selection_, click on _browse_ / _parcourir_ button.
+3. In the section _Feature Model Selection_, click on _browse_ button.
 
 4. Go through your files, to the project directory. Once you're in, go into _static_, _illustration_test_case_, and select _illustrative_fm_scenario1.xml_.
 
@@ -107,15 +107,28 @@ Click on the select menu in order to display options, then select the **XP2** op
 
 This should trigger the download of the **XP2** project as a **zip file**. Depending on your browser settings, you might be asked where you want to save the file. Save it where it will be easy for you to find it.
 
-Once you have unzipped the project, you should have a directory with this file strucutre :
+Once you have unzipped the project, you should have a directory with this file strucutre:
 
-You should have a directory called _XP2_electrical_engine_sound_anomaly_detection_ and a file _current_config.xml_. This xml file is the configuration that you just realized.
+XP2_electrical_engine_sound_anomaly_detection/  
+&nbsp;&nbsp;&nbsp; XP2_electrical_engine_sound_anomaly_detection/  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dataset/  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IDMT-ISA-ELECTRICAL-ENGINE/  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Spectrograms/  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; notebook.ipynb  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; XP2_config.xml  
+&nbsp;&nbsp;&nbsp; current_config.xml
 
-In the directory, you will find the notebook file, _notebook.ipynb_ and the configuration file of this project, _XP2_config.xml_.
+The subfolder of XP2 contains the configuration, the notebook and dataset of this experience.
+Your configuration is the file _current_config.xml_
 
 ### End
 
-You can open the notebook in order to check its construction but it is not executable as it is specified at the beginning of this document.
+You can open the notebook in order to check its construction.  
+If you want to execute the notebook you will have to install the libraries first.
+Then you have two possibilities:
+
+- Execute cells in sequential order starting from the imports cell. Starting there will make you do some very heavy task to compute spectrograms data. (The \*Data formating\*\* section)
+- Execute cells in sequential order starting from the imports cell but skip the **Data formating** section, as Spectrograms data are already computed and included with the dataset.
 
 ### Conclusion
 

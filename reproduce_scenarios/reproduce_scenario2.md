@@ -1,7 +1,8 @@
 # Overview
 
-The goal is for you to reproduce the scenario depicted in the _section 5.3_ of the article.
+The goal is for you to reproduce the scenario depicted in the _section 5.3_ of the article (research paper id: 8212 associated with the artifact guidelines).
 With this scenario, we aim to evaluate how our approach, through its configuration and generation capabilities, helps the user to compose a solution that experiments only partially cover.
+
 Detailed steps are given to you in order to replicate each step of the scenario.
 
 **Disclaimer**:
@@ -24,9 +25,9 @@ If a checkbox is grey (see image), it has been automatically checked or disabled
 
 ## Data
 
-Due to very restricted storage space for anonymous repositories, the datasets **are not** included in the reproduction package and notebooks **are not** executable. Datasets will be available in a Zenodo public reproduction package if the paper is accepted.
+This experience reproduce a situation where the replicator only clones a notebook and not a complete experience, so no dataset are provided with the cloned product.
 
-In order to make a light package, some ML artifacts source code were not included. The CNNAE, that is used in this scenario is one of them, hence you will not be able to find it in the generated notebook. This will be fixed in the public artifact if the paper is accepted.
+However, if the replicator, wants to clone the experience instead of the notebook, dataset will be provided along the notebook and the configuration at the clone step.
 
 ## Protocol
 
@@ -44,7 +45,7 @@ You will see this web page:
 
 **The web page must be reloaded between each scenario**
 
-3. In the section _Feature Model Selection_, click on _browse_ / _parcourir_ button.
+3. In the section _Feature Model Selection_, click on _browse_ button.
 
 4. Go through your files, to the project directory. Once you're in, go into _static_, _illustration_test_case_, and select _illustrative_fm_scenario2.xml_.
 
@@ -138,11 +139,17 @@ This should trigger the download of the notebook as a **zip file**. Depending on
 
 Once you have unzipped, you should have a directory with this structure:
 
-In the directory you will find the noteboook file, _NB2_electrical_engine_sound_anomaly_detection.ipynb_ and the configuration of your current project, _current_config.xml_.
+NB2_electrical_engine_sound_anomaly_detection/  
+&nbsp;&nbsp;&nbsp; NB2_electrical_engine_sound_anomaly_detection.ipynb  
+&nbsp;&nbsp;&nbsp; current_config.xml
+
+As you only cloned a notebook because the data of related experiment are not compatible with yours, dataset are not provided.
+
+However if you want to run this notebook in particular, you can do the **reproduce_scenario1.md**
 
 ### End
 
-You can open notebooks in order to check their construction but they are not executable as it is specified at the beginning of this document.
+You can open notebooks in order to check their construction.
 
 ### Conclusion
 

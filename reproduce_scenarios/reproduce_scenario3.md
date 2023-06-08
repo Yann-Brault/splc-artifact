@@ -1,6 +1,6 @@
 # Overview
 
-The goal is for you to reproduce the scenario depicted in the _section 5.4_ of the article.
+The goal is for you to reproduce the scenario depicted in the _section 5.4_ of the article (research paper id: 8212 associated with the artifact guidelines).
 With this scenario, we want to evaluate the correctness of the generative process, from the proposed code artifacts to the generated Notebook, focusing on the scenario where no previous experiment or solution is available after the configuration process.
 
 Detailed steps are given to you in order to replicate each step of the scenario.
@@ -25,7 +25,7 @@ If a checkbox is grey (see image), it has been automatically checked or disabled
 
 ## Data
 
-Due to very restricted storage space for anonymous repositories, the datasets **are not** included in the reproduction package and notebooks **are not executable**. Datasets will be available in a Zenodo public reproduction package if the paper is accepted.
+This experience reproduce a situation where the replicator only generates a notebook and do not clone experience nor notebooks, so no dataset are provided with the cloned product.
 
 ## Protocol
 
@@ -117,7 +117,7 @@ You should see this on your screen:
 
 ### End
 
-You can open notebooks in order to check their construction but they are not executable as it is specified at the beginning of this document.
+You can open notebooks in order to check their construction but they are not executable because adaped data import steps are not generated, and more broadly they are generated as a base product for the user to work on, not as a final product.
 
 ### Conclusion
 
