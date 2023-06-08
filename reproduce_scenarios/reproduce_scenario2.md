@@ -7,7 +7,7 @@ Detailed steps are given to you in order to replicate each step of the scenario.
 
 **Disclaimer**:
 
-We assume from here that you are running the project with Docker as explained in the [README file](https://anonymous.4open.science/r/splc-artifact-files/README.md).
+We assume from here that you are running the project with Docker as explained in the [README file](https://github.com/Yann-Brault/splc-artifact/blob/main/README.md).
 
 **Checkboxes rule**:
 
