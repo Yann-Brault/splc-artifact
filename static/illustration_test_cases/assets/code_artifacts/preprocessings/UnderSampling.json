@@ -1,0 +1,18 @@
+{
+  "Train": [
+    "# Data treatment\n",
+    "# Decimation/UnderSampling\n",
+    "\n",
+    "def rus_train(obj, x_train, y_train):\n",
+    "    return obj.fit_resample(x_train, y_train)\n",
+    "\n",
+    "rus = RandomUnderSampler(random_state=0)\n",
+    "\n",
+    " # WARNING\n",
+    " # Change the output variable names to avoid loosing your x_train, y_train\n",
+    "x_train, y_train = rus_train(rus, x_train, y_train)"
+  ],
+  "Valid": [],
+  "Test": [],
+  "Imports": ["from imblearn.under_sampling import RandomUnderSampler\n"]
+}

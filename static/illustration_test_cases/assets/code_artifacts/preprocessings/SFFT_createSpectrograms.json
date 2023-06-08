@@ -1,0 +1,33 @@
+{
+  "Train": [
+    "# Data treatment\n",
+    "# buld Spectrograms\n",
+    "\n",
+    "def build_spectrograms(input_folder,saving_folder):\n",
+    "    files = librosa.util.find_files(input_folder, ext=['wav']) \n",
+    "    files = np.asarray(files)\n",
+    "    for y in files: \n",
+    "        data = librosa.load(y, sr = 16000,mono = True)   \n",
+    "        data = data[0]\n",
+    "        S_left = librosa.stft(data, center=True)\n",
+    "        fig, ax = plt.subplots()\n",
+    "        img = librosa.display.specshow(librosa.amplitude_to_db(S_left,ref=np.max),y_axis='log', x_axis='time', ax=ax)\n",
+    "        ax.set_title('Power spectrogram')\n",
+    "        fig.colorbar(img, ax=ax, format='%+2.0f dB')\n",
+    "        file_name = y.split('/')[-1].split('.')[0]\n",
+    "        plt.savefig(f'{saving_folder}/{file_name}.png')\n",
+    "\n",
+    "# reference your data, TO EDIT\n",
+    "folders = [('<input_folder>', '<output_folder>'), ('<input_folder>', '<output_folder>')]\n",
+    "\n",
+    "for input_folder,saving_folder in folders:\n",
+    "    build_spectrograms(input_folder,saving_folder)\n"
+  ],
+  "Valid": [],
+  "Test": [],
+  "Imports": [
+    "import librosa \n",
+    "import numpy as np\n",
+    "import matplotlib.pyplot as plt\n"
+  ]
+}
