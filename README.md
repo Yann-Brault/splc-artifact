@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/627923302.svg)](https://zenodo.org/badge/latestdoi/627923302)
 
-Reproduction package for SPLC 2023
+Reproduction package for the paper entitled "Taming the Diversity of Computational Notebooks" at SPLC 2023
 
 ## Overview
 
@@ -32,6 +32,7 @@ Three datasets are provided in this reproduction package. Two of them are synthe
   - Pip
 
 For the configuration steps, the requirements are as follows:
+
 – a Web browser, being Firefox or Chrome (both have been tested and are
 compatible).
 
@@ -55,7 +56,7 @@ The code is licensed under a LGPL License. See [LICENSE](https://github.com/Yann
 - if you are on a unix system:
   - You can execute the bash script `start.sh` that will use the `docker-compose.yml` file
   - To stop the container execute the bash script `stop.sh`
-- else:
+- otherwise:
   - Run the docker compose file with the command `docker compose up -d --build`.
   - The argument `-d` will the run container in detach mode.
   - The argument `--build` will trigger the build of the `Dockerfile`.
