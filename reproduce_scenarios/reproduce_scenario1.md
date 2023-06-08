@@ -1,7 +1,7 @@
-# Overview
+# Overview of Scenario 1: Retrieve and clone notebook
 
-The goal is for you to reproduce the scenario 1 depicted in the _section 5.2_ of the article (research paper id: 8212 associated with the artifact guidelines).
-With this scenario, we want to evaluate how our approach differentiate itself from a keyword-based search.
+The goal is for you to reproduce the scenario 1 depicted in the _section 5.2_ of the paper.
+With this scenario, we want to evaluate how our approach differentiates itself from a keyword-based search.
 
 Detailed steps are given to you in order to replicate each step of the scenario.
 
