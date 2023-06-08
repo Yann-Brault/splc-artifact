@@ -1,13 +1,13 @@
 # Overview of Scenario 3: Elaborate a new notebook and generate
 
 The goal is for you to reproduce the scenario depicted in the _section 5.4_ of the paper.
-With this scenario, we want to evaluate the correctness of the generative process, from the proposed code artifacts to the generated Notebook, focusing on the scenario where no previous experiment or solution is available after the configuration process.
+With this scenario, we want to evaluate the correctness of the generative process, from the proposed code artifacts to the generated Notebook, focusing on the scenario where no previous experiments nor solutions are available after the configuration process.
 
 Detailed steps are given to you in order to replicate each step of the scenario.
 
 **Disclaimer**:
 
-We assume from here that you are running the project with Docker as explained in the [README file](https://github.com/Yann-Brault/splc-artifact/blob/main/README.md).
+We assume from here that you are running the project with Docker as explained in the [README file](../README.md).
 
 **Checkboxes rule**:
 
@@ -25,15 +25,15 @@ If a checkbox is grey (see image), it has been automatically checked or disabled
 
 ## Data
 
-This experience reproduce a situation where the replicator only generates a notebook and do not clone experience nor notebooks, so no dataset are provided with the cloned product.
+This experiment reproduces a situation where the replicator only generates new products and does not clones experiments, hence no datasets are provided.
 
 ## Protocol
 
-### Run the projet
+### Run the project
 
 1. Exec start script -> `./start.sh`
 
-2. Go on this link -> [here](http://localhost:5050/)
+2. Go to this url: [http://localhost:5050/](http://localhost:5050/) to access the main application.
 
 You will see this web page:
 
@@ -43,7 +43,7 @@ You will see this web page:
 
 **The web page must be reloaded between each scenario**
 
-3. In the section _Feature Model Selection_, click on _browse_ / _parcourir_ button.
+3. In the section _Feature Model Selection_, click on _browse_ button.
 
 4. Go through your files, to the project directory. Once you're in, go into _static_, _illustration_test_case_, and select _illustrative_fm_scenario2.xml_.
 
@@ -63,7 +63,7 @@ You should now see this on your screen :
 
 The area at the top is present across all tabs. It keeps track of all automatically selected or deselected features due to constraint propagation.
 
-### Unfolding the scenario : Elaborate a new notebook and generate
+### Unfolding the scenario: Elaborate a new notebook and generate
 
 #### Step 1 for scenario 3 unfolding
 
@@ -79,13 +79,13 @@ You should have this result:
 
 #### Step 2 for scenario 3 unfolding
 
-7. You can now click on tab _Business Requirements_ in order to complete them. Then, you can disable the option **NovelAnomaliesEmergeInProd** and check **GlobalAnomalies**. Since all XPs are not compatible with the configuration, there is no need to clone a notebook.
+7. You can now click on the tab _Business Requirements_ in order to complete them. Then, you can disable the option **NovelAnomaliesEmergeInProd** and check **GlobalAnomalies**. Since all XPs are not compatible with the configuration, there is no need to clone a notebook.
 
 ![InitialProblem](../assets/scenarios/scenario_3/initialProblem_scenario3.png)
 
 #### Step 3 for scenario 5.3 unfolding
 
-8. Hence you can go in the tab _ML Artifacts_ by clicking on it.
+8. Hence you can go to the tab _ML Artifacts_ by clicking on it.
 
 9. You are going to generate two notebooks (to follow the scenario).
 
@@ -95,7 +95,7 @@ For the first one, you are going to check **MinMaxScaler** in _PreProcessings_ a
 
 11. Once it is done, click on the _initialize_ tab.
 
-12. Go down in the page to find the _Export Configuration_ section, and then click on _Export Current Configuration_ button. You should see text appear in the text area. It is your complete configuration as xml formatted text.
+12. Go down the page to find the _Export Configuration_ section, and then click on the _Export Current Configuration_ button. You should see text appear in the text area. It is your complete configuration as XML formatted text.
 
 You should see this on your screen:
 
@@ -107,7 +107,7 @@ You should see this on your screen:
 
 14. Finally, click on the _Download_ button, and the notebook should be downloaded. Depending on your browser settings, you might be asked where you want to save the file. Save it where it will be easy for you to find it.
 
-15. To generate the second notebook, go back to the _ML Artifacts_ tab. You will have to check a **ResNet** as _Algorithms_ instead of a **CNN**. To do that reset the **CNN** checkbox by double clicking it (the goal is to have a blank checkbox). It should also reset all _Algorithms_ options. Once it is done, you can check the **ResNet**.
+15. To generate the second notebook, go back to the _ML Artifacts_ tab. You will have to check a **ResNet** as _Algorithms_ instead of a **CNN**. To do that reset the **CNN** checkbox by double-clicking it (the goal is to have a blank checkbox). It should also reset all _Algorithms_ options. Once it is done, you can check the **ResNet**.
 
 ![solution1](../assets/scenarios/scenario_3/solution2_scenario3.png)
 
@@ -117,7 +117,7 @@ You should see this on your screen:
 
 ### End
 
-You can open notebooks in order to check their construction but they are not executable because adapted data import steps are not generated, and more broadly they are generated as a base product for the user to work on, not as a final product.
+You can open notebooks in order to check their construction but **THEY ARE NOT EXECUTABLE** because adapted data import steps are not generated, and more broadly they are generated as a base product for the user to work on, not as a final product.
 
 ### Conclusion
 

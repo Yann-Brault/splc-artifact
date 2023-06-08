@@ -28,32 +28,32 @@ Three datasets are provided in this reproduction package. Two of them are synthe
   - Docker (code was run with Docker 23.0.5)
   - Docker compose
 - For running it directly on a computer:
-  - Python (Python 3.8 at least, artifact was developed on Python 3.10)
+  - Python (Python 3.8 at least, the artifact was developed on Python 3.10)
   - Pip
 
 For the configuration steps, the requirements are as follows:
 
-– a Web browser, being Firefox or Chrome (both have been tested and are
+– a Web browser, Firefox or Chrome (both have been tested and are
 compatible).
 
-_The artifact has been developed on Linux Ubuntu 22.04. It also has been tested on the same version of Ubuntu and on an Apple machine with Apple Silicon chip._
+_The artifact has been developed on Linux Ubuntu 22.04. It also has been tested on the same version of Ubuntu and on an Apple machine with an Apple Silicon chip._
 
 ## Description of programs/code
 
-- The file `index.html` in `static/configurator` is the web page that the replicator will use as user interface.
+- The file `index.html` in `static/configurator` is the web page that the replicator will use as the user interface.
 - The program `main.py` in `app` is the backend of the architecture and is responsible for serving static files (web page).
-- The program `router.py` in `app/api` is the api and is responsible for handling generation and clone request.
-- The file `Dockerfile` in `app` and `Docker-compose.yml` at root are used by `start.sh` to build the Docker image of the application and run it in a container.
+- The program `router.py` in `app/api` is the API and is responsible for handling generation and clone requests.
+- The file `Dockerfile` in `app` and `Docker-compose.yml` at root is used by `start.sh` to build the Docker image of the application and run it in a container.
 
 ### License for Code
 
-The code is licensed under a LGPL License. See [LICENSE](https://github.com/Yann-Brault/splc-artifact/blob/main/LICENSE) for details.
+The code is licensed under an LGPL License. See [LICENSE](./LICENSE) for details.
 
 ## Instructions to Replicators
 
-### How to run application using Docker
+### How to run the application using Docker
 
-- if you are on a unix system:
+- if you are on a Unix system:
   - You can execute the bash script `start.sh` that will use the `docker-compose.yml` file
   - To stop the container execute the bash script `stop.sh`
 - otherwise:
@@ -66,14 +66,14 @@ The code is licensed under a LGPL License. See [LICENSE](https://github.com/Yann
 
 - Go to this url: [http://localhost:5050/](http://localhost:5050/) to access the main application.
 
-In both cases, if the docker execution goes well, the replicator should see a prompt similar as the following:
+In both cases, if the docker execution goes well, the replicator should see a prompt similar to the following:
 
 ```
 CONTAINER ID   IMAGE           COMMAND                  CREATED        STATUS                  PORTS                                       NAMES
 7d83851b7ce6   splc-artifact   "uvicorn app.main:ap…"   1 second ago   Up Less than a second   0.0.0.0:5050->5000/tcp, :::5050->5000/tcp   splc-application
 ```
 
-### How to run application without Docker (full installation, Linux only)
+### How to run the application without Docker (full installation, Linux only)
 
 In a terminal, in the project directory:
 
@@ -94,7 +94,7 @@ If you want to stop the process:
 
 #### Requirements
 
-In order to run a Jupyter Notebook, you will need a Jupyter environment, either Jupyter notebook or JupyterLab.
+In order to run a Jupyter Notebook, you will need a Jupyter environment, either Jupyter Notebook or JupyterLab.
 
 #### Instructions to install Jupyter notebook
 
@@ -106,13 +106,13 @@ In order to run a Jupyter Notebook, you will need a Jupyter environment, either 
 
 In order to run a notebook:
 
-- in a terminal go in the notebook directory
-- To run with jupyter notebook, execute bash command `jupyter notebook`
+- in a terminal go to the notebook directory
+- To run with Jupyter Notebook, execute bash command `jupyter notebook`
 - To run with JupyterLab, execute the bash command `jupyter-lab`.
 
-In both cases the command will open at `localhost:8888`
+In both cases, the command will open the JUpyter environment at `localhost:8888`
 
-In order to run the code inside the notebook, you will need Python libraries:
+In order to run the code inside cloned notebooks, you will need Python libraries:
 
 | Library    | command                     | Link                                                 |
 | ---------- | --------------------------- | ---------------------------------------------------- |
@@ -122,18 +122,18 @@ In order to run the code inside the notebook, you will need Python libraries:
 | librosa    | pip install librosa         | [link](https://librosa.org/doc/latest/install.html)  |
 | numpy      | pip install numpy           | [link](https://pypi.org/project/numpy/)              |
 
-All these libraries are needed to run the cloned experiences
+**All these libraries are needed to run the cloned experiment in [scenario 1](./reproduce_scenarios/reproduce_scenario1.md).**
 
 ### How to reproduce scenarios
 
 #### Scenario 1
 
-At this [link](https://github.com/Yann-Brault/splc-artifact/blob/main/reproduce_scenarios/reproduce_scenario1.md), or in the directory _reproduce_scenarios_ you can find the guidelines to reproduce the scenario 1 of section 5.2 in the paper. The goal of this scenario is to realize a problem specification base search to find a reusable solution and clone it.
+At this [link](./reproduce_scenarios/reproduce_scenario1.md), or in the directory _reproduce_scenarios_ you can find the guidelines to reproduce scenario 1 of section 5.2 in the paper. The goal of this scenario is to realize a problem specification base search to find a reusable solution and clone it.
 
 #### Scenario 2
 
-At this [link](https://github.com/Yann-Brault/splc-artifact/blob/main/reproduce_scenarios/reproduce_scenario2.md), or in the directory _reproduce_scenarios_ you can find the guidelines to reproduce the scenario 2 of section 5.3 in the paper. The goal of this scenario is to realize a problem specification base search. The search does not provides a suitable and working solution, but you are able to find a notebook that can be suitable by extending it with a new ML artifact.
+At this [link](./reproduce_scenarios/reproduce_scenario2.md), or in the directory _reproduce_scenarios_ you can find the guidelines to reproduce scenario 2 of section 5.3 in the paper. The goal of this scenario is to realize a problem specification base search. The search does not provide a suitable and working solution, but you are able to find a notebook that can be suitable by extending it with a new ML artifact.
 
 #### Scenario 3
 
-At this [link](https://github.com/Yann-Brault/splc-artifact/blob/main/reproduce_scenarios/reproduce_scenario3.md), or in the directory _reproduce_scenarios_ you can find the guidelines to reproduce the scenario 3 of section 5.4 in the paper. The goal of this scenario is to realize a problem specification base search. The search does not provides any suitable solution. The objective here is to hand-pick ML artifacts composing the notebook in order to create a new product not available in the system.
+At this [link](./reproduce_scenarios/reproduce_scenario3.md), or in the directory _reproduce_scenarios_ you can find the guidelines to reproduce scenario 3 of section 5.4 in the paper. The goal of this scenario is to realize a problem specification base search. The search does not provide any suitable solution. The objective here is to hand-pick ML artifacts composing the notebook in order to create a new product not available in the system.

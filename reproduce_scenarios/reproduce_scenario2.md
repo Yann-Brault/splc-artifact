@@ -1,4 +1,4 @@
-# Overview of Scenario 2: Reuse, complete and generate notebook
+# Overview of Scenario 2: Reuse, complete, and generate notebook
 
 The goal is for you to reproduce the scenario depicted in the _section 5.3_ of the paper.
 With this scenario, we aim to evaluate how our approach, through its configuration and generation capabilities, helps the user to compose a solution that experiments only partially cover.
@@ -7,7 +7,7 @@ Detailed steps are given to you in order to replicate each step of the scenario.
 
 **Disclaimer**:
 
-We assume from here that you are running the project with Docker as explained in the [README file](https://github.com/Yann-Brault/splc-artifact/blob/main/README.md).
+We assume from here that you are running the project with Docker as explained in the [README file](../README.md).
 
 **Checkboxes rule**:
 
@@ -25,17 +25,17 @@ If a checkbox is grey (see image), it has been automatically checked or disabled
 
 ## Data
 
-This experience reproduce a situation where the replicator only clones a notebook and not a complete experience, so no dataset are provided with the cloned product.
+This experience reproduces a situation where the replicator only clones a notebook and not a complete experiment, so no datasets are provided with the cloned product.
 
-However, if the replicator, wants to clone the experience instead of the notebook, dataset will be provided along the notebook and the configuration at the clone step.
+However, if the replicator, wants to clone the experiment instead of the notebook, datasets will be provided along with the notebook and the configuration. Please know that cloning a full experiment is the scenario depicted in [scenario 1](./reproduce_scenario1.md)
 
 ## Protocol
 
-### Run the projet
+### Run the project
 
 1. Exec start script -> `./start.sh`
 
-2. Go on this link -> [here](http://localhost:5050/)
+2. Go to this url: [http://localhost:5050/](http://localhost:5050/) to access the main application.
 
 You will see this web page:
 
@@ -65,7 +65,7 @@ You should now see this on your screen :
 
 The area at the top is present across all tabs. It keeps track of all automatically selected or deselected features due to constraint propagation.
 
-### Unfolding the scenario: Reuse, complete and generate notebook
+### Unfolding the scenario: Reuse, complete, and generate notebook
 
 #### Step 1 of scenario 2 unfolding
 
@@ -75,13 +75,13 @@ You should have this result:
 
 ![InitialData](../assets/scenarios/scenario_1/initialData_scenario1.png)
 
-> If you click on tab _Past Experiments_ you can confirm that the **XP1** has been automatically disabled, but the **NB1** is still enabled. As explained in the paper, this is due to the fact that **XP1** configuration is not compatible with the current one, but the notebook **NB1**, however, is still compatible due to the fact that the algorithm is able to deal with partially labelled data.
+> If you click on tab _Past Experiments_ you can confirm that the **XP1** has been automatically disabled, but the **NB1** is still enabled. As explained in the paper, this is due to the fact that the **XP1** configuration is not compatible with the current one, but the notebook **NB1**, however, is still compatible due to the fact that the algorithm is able to deal with partially labelled data.
 
 ![past application](../assets/scenarios/scenario_1/past_appli_scenario1.png)
 
 #### Step 2 of scenario 2 unfolding
 
-7. You can now click on tab _Business Requirements_ in order to complete them. Then, you can check the options **NovelAnomaliesEmergeInProd**, **PatternAnomaly** and **Microcontroller** as it will be deployed on this type of system.
+7. You can now click on the tab _Business Requirements_ in order to complete them. Then, you can check the options **NovelAnomaliesEmergeInProd**, **PatternAnomaly**, and **Microcontroller** as it will be deployed on this type of system.
 
 ![InitialProblem](../assets/scenarios/scenario_2/initialProblem_scenario2.png)
 
@@ -95,15 +95,15 @@ You should have this result:
 
 #### Step 3 of scenario 2 unfolding
 
-8. You can now go back to the tab _ML Atifacts_, go to the bottom of the page and check _QuantizeNN_ by clicking on the checkbox once. Due to constraints linked to the selection, you should have such a configuration:
+8. You can now go back to the tab _ML Atifacts_, go to the bottom of the page, and check _QuantizeNN_ by clicking on the checkbox once. Due to constraints linked to the selection, you should have such a configuration:
 
 ![solutionPropagated](../assets/scenarios/scenario_2/solution_propagated_scenario2.png)
 
-> The constraint 5 in fig. 7 (in the paper) rules out all the non neural networks models, and the constraint 15 fig. 7 (in the paper) rules out LSTMAE as it is not compatible with quantizing neural networks. At this stage all the experiments are ruled out, additionally the notebook **NB1** is ruled out too because it uses LSTMAE.
+> Constraint 5 in Fig. 7 (in the paper) rules out all the non-neural network models, and constraint 15 in Fig. 7 (in the paper) rules out LSTMAE as it is not compatible with quantizing neural networks. At this stage all the experiments are ruled out, additionally, the notebook **NB1** is ruled out too because it uses LSTMAE.
 
 #### Step 4 of scenario 2 unfolding
 
-9. At this stage, if you go back to the _Past Experiments_ tab, you can confirm that all XPs are disabled and that the **NB1** too. You are able to reuse **NB2** or **NB3**. You can check the **NB2** to add its ML artifacts to your configuration.
+9. At this stage, if you go back to the _Past Experiments_ tab, you can confirm that all XPs are disabled and that the **NB1** is too. You are able to reuse **NB2** or **NB3**. You can check the **NB2** to add its ML artifacts to your configuration.
 
 ![past appli 2](../assets/scenarios/scenario_2/past_appli2_scenario2.png)
 
@@ -111,9 +111,9 @@ You should have this result:
 
 #### Step 5 of scenario 2 unfolding
 
-10. Go back at the top of the page and click on the _Initialize_ tab.
+10. Go back to the top of the page and click on the _Initialize_ tab.
 
-11. Go down in the page to find the _Export Configuration_ section, and then click on _Export Current Configuration_ button. You should see text appear in the text area. It is your complete configuration as xml formatted text.
+11. Go down the page to find the _Export Configuration_ section, and then click on the _Export Current Configuration_ button. You should see text appear in the text area. It is your complete configuration as XML formatted text.
 
 You should see this on your screen:
 
@@ -127,13 +127,13 @@ You should see this on your screen:
 
 ### Extra steps
 
-You might want to download the notebook that you reused. In order to do so:
+You might want to download the original notebook that you reused. In order to do so:
 
-14. Go back to the top of the page and click on the _Past Experiments_ tab. Go to the bottom to the clone form. Click on the select menu in order to display options, then select the notebook option that match the one you reused.
+14. Go back to the top of the page and click on the _Past Experiments_ tab. Go down to the clone form. Click on the select menu in order to display options, then select the notebook option that matches the one you reused.
 
 ![selectMenu](../assets/scenarios/scenario_2/clone_reuse_scenario2.png)
 
-Finally you can click on the button _clone_.
+Finally, you can click on the button _clone_.
 
 This should trigger the download of the notebook as a **zip file**. Depending on your browser settings, you might be asked where you want to save the file. Save it where it will be easy for you to find it.
 
@@ -143,15 +143,16 @@ NB2_electrical_engine_sound_anomaly_detection/
 &nbsp;&nbsp;&nbsp; NB2_electrical_engine_sound_anomaly_detection.ipynb  
 &nbsp;&nbsp;&nbsp; current_config.xml
 
-As you only cloned a notebook because the data of related experiment are not compatible with yours, dataset are not provided.
+**As you only cloned a notebook and not a full experiment, datasets ARE NOT provided with the notebook.**
 
-However if you want to run this notebook in particular, you can do the **reproduce_scenario1.md**
+However, if you want to be able to run this notebook in particular, you can refer to the [scenario 1](./reproduce_scenario1.md)
 
 ### End
 
 You can open notebooks in order to check their construction.
-The generated notebook is not executable because adapted data import steps are not generated, and more broadly they are generated as a base product for the user to work on, not as a final product.
+
+**The generated notebook, the one downloaded at step 13 IS NOT executable because adapted data import steps are not generated, and more broadly they are generated as a base product for the user to work on, not as a final product.**
 
 ### Conclusion
 
-So with this scenario, you have benn able to retrieve several past notebooks, and reuse one by adding a new feature in order to generate a new notebook that well suits your problem. You were also capable to clone the reused product to compare it with the new notebook.
+So with this scenario, you have been able to retrieve several past notebooks and reuse one by adding a new feature in order to generate a new notebook that well suits your problem. You were also capable to clone the reused product to compare it with the new notebook.

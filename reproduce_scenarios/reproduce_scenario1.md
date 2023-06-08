@@ -1,13 +1,13 @@
 # Overview of Scenario 1: Retrieve and clone notebook
 
-The goal is for you to reproduce the scenario 1 depicted in the _section 5.2_ of the paper.
+The goal is for you to reproduce scenario 1 depicted in the _section 5.2_ of the paper.
 With this scenario, we want to evaluate how our approach differentiates itself from a keyword-based search.
 
 Detailed steps are given to you in order to replicate each step of the scenario.
 
 **Disclaimer**:
 
-We assume from here that you are running the project with Docker as explained in the [README file](https://github.com/Yann-Brault/splc-artifact/blob/main/README.md).
+We assume from here that you are running the project with Docker as explained in the [README file](../README.md).
 
 **Checkboxes rules**:
 
@@ -25,15 +25,15 @@ If a checkbox is grey (see image), it has been automatically checked or disabled
 
 ## Data
 
-Data to reproduce the experience will be given when cloning the experience.
+Data to reproduce the cloned experiment will be provided when cloning the experiment.
 
 ## Protocol
 
-### Run the projet
+### Run the project
 
 1. Exec start script -> `./start.sh`
 
-2. Go on this link -> [here](http://localhost:5050/)
+2. Go to this url: [http://localhost:5050/](http://localhost:5050/) to access the main application.
 
 You will see this web page:
 
@@ -63,7 +63,7 @@ You should now see this on your screen :
 
 The area at the top is present across all tabs. It keeps track of all automatically selected or deselected features due to constraint propagation.
 
-### Unfolding the scenario : Retrieve and clone notebook
+### Unfolding the scenario: Retrieve and clone notebooks
 
 #### Step 1 of scenario 1 unfolding
 
@@ -81,7 +81,7 @@ You should have this result:
 
 #### Step 2 of scenario 1 unfolding
 
-7. You can now click on tab _Business Requirements_ in order to complete them. Thus, you can check the option **NovelAnomaliesEmergeInProd** and **patternAnomaly**.
+7. You can now click on the tab _Business Requirements_ in order to complete them. Thus, you can check the option **NovelAnomaliesEmergeInProd** and **patternAnomaly**.
 
 ![InitialProblem](../assets/scenarios/scenario_1/initialProblem_scenario1.png)
 
@@ -95,7 +95,7 @@ You should have this result:
 
 ![past application](../assets/scenarios/scenario_1/past_appli_scenario1.png)
 
-So, you can click on the checkbox of the **XP2** firstly, in order to add it to your configuration. Then you go to the form at the bottom of the page.
+So, you can click on the checkbox of the **XP2** first, in order to add it to your configuration. Then you go to the form at the bottom of the page.
 
 Click on the select menu in order to display options, then select the **XP2** option.
 
@@ -103,11 +103,11 @@ Click on the select menu in order to display options, then select the **XP2** op
 
 #### Step 4 of scenario 1 unfolding
 
-9. Finally you can click on the button _clone_. **Beware that the generation process may take several minutes (2 to 4 minutes on our development machine) as it generates a zip file of 1.6Go corresponding to the complete notebook.**
+9. Finally you can click on the button _clone_. **Beware that the cloning process may take several minutes (2 to 4 minutes on our development machine) as it generates a zip file of 1.6Go corresponding to the complete experiment.**
 
 This should trigger the download of the **XP2** project as a **zip file**. Depending on your browser settings, you might be asked where you want to save the file. Save it where it will be easy for you to find it.
 
-Once you have unzipped the project, you should have a directory with this file strucutre:
+Once you have unzipped the project, you should have a directory with this file structure:
 
 XP2_electrical_engine_sound_anomaly_detection/  
 &nbsp;&nbsp;&nbsp; XP2_electrical_engine_sound_anomaly_detection/  
@@ -118,15 +118,19 @@ XP2_electrical_engine_sound_anomaly_detection/
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; XP2_config.xml  
 &nbsp;&nbsp;&nbsp; current_config.xml
 
-The subfolder of XP2 contains the configuration, the notebook and dataset of this experience.
+The subfolder of XP2 contains the configuration, the notebook, and the dataset of this experience.
 Your configuration is the file _current_config.xml_
 
 ### End
 
-You can open the notebook in order to check its construction.  
-If you want to execute the notebook you will have to install the libraries first.
-Then you can execute cells in sequential order starting from the imports cell but skip the **Data formating** section, as Spectrograms data are already computed and included with the dataset.
+You can open the notebook to check its construction.
+
+**If you want to execute the notebook you will have to have a working Jupyter environment and install the Python libraries needed.**
+
+Please refer to the **"How to run a Jupyter Notebook"** section in the main [README.md](../README.md).
+
+Once the Jupyter is running **you can execute the notebook cells in sequential order starting from the imports cell BUT SKIP THE DATA FORMATING SECTION that computes spectrograms. These data are already computed and included with the dataset.**
 
 ### Conclusion
 
-So with this scenario, You have been able to retrieve several past experiments and notebooks by giving to the system your configuration. Thanks to the constraints model you were able to clone one that match your problem.
+So with this scenario, You have been able to retrieve several past experiments and notebooks by giving the system your configuration. Thanks to the constraints model you were able to clone one that match your problem.
