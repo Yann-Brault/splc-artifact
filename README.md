@@ -87,6 +87,40 @@ If you want to stop the process:
 
 - Hit `ctrl+c` in the same terminal
 
+### How to run a Jupyter Notebook
+
+#### Requirements
+
+In order to run a Jupyter Notebook, you will need a Jupyter environment, either Jupyter notebook or JupyterLab.
+
+#### Instructions to install Jupyter notebook
+
+- in a terminal, run the command `pip install notebook`, more details [here](https://jupyter.org/install)
+
+#### Instructions to install JupyterLab
+
+- in a terminal, run the command `pip install jupyterlab`, more details [here](https://jupyter.org/install)
+
+In order to run a notebook:
+
+- in a terminal go in the notebook directory
+- To run with jupyter notebook, execute bash command `jupyter notebook`
+- To run with JupyterLab, execute the bash command `jupyter-lab`.
+
+In both cases the command will open at `localhost:8888`
+
+In order to run the code inside the notebook, you will need Python libraries:
+
+| Library    | command                     | Link                                                 |
+| ---------- | --------------------------- | ---------------------------------------------------- |
+| Tensorflow | pip install tensorflow      | [link](https://pypi.org/project/tensorflow/)         |
+| Keras      | pip install keras           | [link](https://pypi.org/project/keras/)              |
+| sklearn    | pip install -U scikit-learn | [link](https://scikit-learn.org/stable/install.html) |
+| librosa    | pip install librosa         | [link](https://librosa.org/doc/latest/install.html)  |
+| numpy      | pip install numpy           | [link](https://pypi.org/project/numpy/)              |
+
+All these libraries are needed to run the cloned experiences
+
 ### How to reproduce scenarios
 
 #### Scenario 1
