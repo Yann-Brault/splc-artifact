@@ -103,7 +103,7 @@ Click on the select menu in order to display options, then select the **XP2** op
 
 #### Step 4 of scenario 1 unfolding
 
-9. Finally you can click on the button _clone_.
+9. Finally you can click on the button _clone_. **Beware that the generation process may take several minutes (2 to 4 minutes on our development machine) as it generates a zip file of 1.6Go corresponding to the complete notebook.**
 
 This should trigger the download of the **XP2** project as a **zip file**. Depending on your browser settings, you might be asked where you want to save the file. Save it where it will be easy for you to find it.
 

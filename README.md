@@ -64,7 +64,7 @@ The code is licensed under a LGPL License. See [LICENSE](https://github.com/Yann
   - Once the execution is finished, you can run the command `docker ps` to ensure that the container is running.
   - To stop the container execute the command `docker compose down`.
 
-- Go to this url: [http://localhost:5050/](http://localhost:5050/) to access the application
+- Go to this url: [http://localhost:5050/](http://localhost:5050/) to access the main application.
 
 In both cases, if the docker execution goes well, the replicator should see a prompt similar as the following:
 
@@ -84,7 +84,7 @@ In a terminal, in the project directory:
   - [nbformat](https://github.com/jupyter/nbformat)
   - [xmltodict](https://pypi.org/project/xmltodict/)
 - Run the command `uvicorn app.main:app --port 5050 --host 0.0.0.0 --reload`.
-- Go to this url: [http://localhost:5050/](http://localhost:5050/),
+- Go to this url: [http://localhost:5050/](http://localhost:5050/) to access the main application.
 
 If you want to stop the process:
 
