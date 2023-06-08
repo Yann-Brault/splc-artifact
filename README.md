@@ -90,12 +90,12 @@ If you want to stop the process:
 
 #### Scenario 1
 
-At this [link](https://anonymous.4open.science/r/splc-artifact-files/reproduce_scenarios/reproduce_scenario1.md), or in the directory _reproduce_scenarios_ you can find the guidelines to reproduce the scenario 1 of section 5.2 in the paper. The goal of this scenario is to realize a problem specification base search to find a reusable solution and clone it.
+At this [link](https://github.com/Yann-Brault/splc-artifact/blob/main/reproduce_scenarios/reproduce_scenario1.md), or in the directory _reproduce_scenarios_ you can find the guidelines to reproduce the scenario 1 of section 5.2 in the paper. The goal of this scenario is to realize a problem specification base search to find a reusable solution and clone it.
 
 #### Scenario 2
 
-At this [link](https://anonymous.4open.science/r/splc-artifact-files/reproduce_scenarios/reproduce_scenario2.md), or in the directory _reproduce_scenarios_ you can find the guidelines to reproduce the scenario 2 of section 5.3 in the paper. The goal of this scenario is to realize a problem specification base search. The search does not provides a suitable and working solution, but you are able to find a notebook that can be suitable by extending it with a new ML artifact.
+At this [link](https://github.com/Yann-Brault/splc-artifact/blob/main/reproduce_scenarios/reproduce_scenario2.md), or in the directory _reproduce_scenarios_ you can find the guidelines to reproduce the scenario 2 of section 5.3 in the paper. The goal of this scenario is to realize a problem specification base search. The search does not provides a suitable and working solution, but you are able to find a notebook that can be suitable by extending it with a new ML artifact.
 
 #### Scenario 3
 
-At this [link](https://anonymous.4open.science/r/splc-artifact-files/reproduce_scenarios/reproduce_scenario3.md), or in the directory _reproduce_scenarios_ you can find the guidelines to reproduce the scenario 3 of section 5.4 in the paper. The goal of this scenario is to realize a problem specification base search. The search does not provides any suitable solution. The objective here is to hand-pick ML artifacts composing the notebook in order to create a new product not available in the system.
+At this [link](https://github.com/Yann-Brault/splc-artifact/blob/main/reproduce_scenarios/reproduce_scenario3.md), or in the directory _reproduce_scenarios_ you can find the guidelines to reproduce the scenario 3 of section 5.4 in the paper. The goal of this scenario is to realize a problem specification base search. The search does not provides any suitable solution. The objective here is to hand-pick ML artifacts composing the notebook in order to create a new product not available in the system.
