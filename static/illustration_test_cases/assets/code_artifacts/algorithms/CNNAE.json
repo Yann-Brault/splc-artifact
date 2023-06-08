@@ -9,7 +9,7 @@
     "        inputShape = (height, width, depth)\n",
     "        chanDim = -1\n",
     "        inputs = Input(shape=inputShape)\n",
-    "        x = inpu\n",
+    "        x = inputs\n",
     "        for f in filters:\n",
     "            x = Conv2D(f, (3, 3), strides=2, padding='same')(x)\n",
     "            x = LeakyReLU(alpha=0.2)(x)\n",
@@ -147,7 +147,9 @@
     "from tensorflow.keras.layers import Input\n",
     "from keras.layers import Conv2DTranspose\n",
     "from tensorflow.keras import backend as K\n",
-    "import librosa",
-    "import librosa.display\n"
+    "import librosa\n",
+    "import librosa.display\n",
+    "import time\n",
+    "import pandas as pd\n"
   ]
 }

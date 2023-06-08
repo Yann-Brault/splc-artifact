@@ -125,10 +125,7 @@ Your configuration is the file _current_config.xml_
 
 You can open the notebook in order to check its construction.  
 If you want to execute the notebook you will have to install the libraries first.
-Then you have two possibilities:
-
-- Execute cells in sequential order starting from the imports cell. Starting there will make you do some very heavy task to compute spectrograms data. (The \*Data formating\*\* section)
-- Execute cells in sequential order starting from the imports cell but skip the **Data formating** section, as Spectrograms data are already computed and included with the dataset.
+Then you can execute cells in sequential order starting from the imports cell but skip the **Data formating** section, as Spectrograms data are already computed and included with the dataset.
 
 ### Conclusion
 

@@ -150,6 +150,7 @@ However if you want to run this notebook in particular, you can do the **reprodu
 ### End
 
 You can open notebooks in order to check their construction.
+The generated notebook is not executable because adapted data import steps are not generated, and more broadly they are generated as a base product for the user to work on, not as a final product.
 
 ### Conclusion
 

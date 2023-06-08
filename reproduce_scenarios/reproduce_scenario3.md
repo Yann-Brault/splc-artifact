@@ -117,7 +117,7 @@ You should see this on your screen:
 
 ### End
 
-You can open notebooks in order to check their construction but they are not executable because adaped data import steps are not generated, and more broadly they are generated as a base product for the user to work on, not as a final product.
+You can open notebooks in order to check their construction but they are not executable because adapted data import steps are not generated, and more broadly they are generated as a base product for the user to work on, not as a final product.
 
 ### Conclusion
 
