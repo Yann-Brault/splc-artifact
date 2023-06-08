@@ -57,11 +57,14 @@ The code is licensed under a LGPL License. See [LICENSE](https://github.com/Yann
   - You can execute the bash script `start.sh` that will use the `docker-compose.yml` file
   - To stop the container execute the bash script `stop.sh`
 - otherwise:
+
   - Run the docker compose file with the command `docker compose up -d --build`.
   - The argument `-d` will the run container in detach mode.
   - The argument `--build` will trigger the build of the `Dockerfile`.
   - Once the execution is finished, you can run the command `docker ps` to ensure that the container is running.
   - To stop the container execute the command `docker compose down`.
+
+- Go to this url: [http://localhost:5050/](http://localhost:5050/) to access the application
 
 In both cases, if the docker execution goes well, the replicator should see a prompt similar as the following:
 
@@ -81,7 +84,7 @@ In a terminal, in the project directory:
   - [nbformat](https://github.com/jupyter/nbformat)
   - [xmltodict](https://pypi.org/project/xmltodict/)
 - Run the command `uvicorn app.main:app --port 5050 --host 0.0.0.0 --reload`.
-- Go to this [link](http://localhost:5050/)
+- Go to this url: [http://localhost:5050/](http://localhost:5050/),
 
 If you want to stop the process:
 
