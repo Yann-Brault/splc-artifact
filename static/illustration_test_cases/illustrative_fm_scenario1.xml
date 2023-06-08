@@ -51,9 +51,9 @@
 						<feature name="RobustScaler"/>
 					</alt>
 					<alt abstract="true" name="LabelsProcessing">
-						<feature name="augmentation"/>
-						<feature name="Decimation"/>
-						<feature name="removal"/>
+						<feature name="Smote"/>
+						<feature name="UnderSampling"/>
+						<!-- <feature name="removal"/> -->
 					</alt>
 				</and>
 				<alt abstract="true" name="Algorithms">
@@ -206,12 +206,12 @@
 					<var>FullyLabelled</var>
 					<conj>
 						<var>PartiallyLabelled</var>
-						<var>augmentation</var>
+						<var>Smote</var>
 					</conj>
 				</disj>
 			</imp>
 		</rule>
-		<rule>
+		<!-- <rule>
 			<imp>
 				<var>UnlabelledState</var>
 				<disj>
@@ -225,7 +225,7 @@
 					<var>Unlabelled</var>
 				</disj>
 			</imp>
-		</rule>
+		</rule> -->
 		<rule>
 			<imp>
 				<var>PartiallyLabelledState</var>
@@ -233,7 +233,7 @@
 					<var>PartiallyLabelled</var>
 					<conj>
 						<var>FullyLabelled</var>
-						<var>Decimation</var>
+						<var>UnderSampling</var>
 					</conj>
 				</disj>
 			</imp>

@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_generation": "2023-05-02",
-    "features_count": 13
+    "last_generation": "2023-06-08",
+    "features_count": 18
   },
   "features": {
     "CNN": {
@@ -14,6 +14,11 @@
       "dir": "algorithms",
       "path": "./static/illustration_test_cases/assets/code_artifacts/algorithms/IsolationForest.json"
     },
+    "decisionTree": {
+      "known": true,
+      "dir": "algorithms",
+      "path": "./static/illustration_test_cases/assets/code_artifacts/algorithms/decisionTree.json"
+    },
     "SVM": {
       "known": true,
       "dir": "algorithms",
@@ -23,6 +28,11 @@
       "known": true,
       "dir": "algorithms",
       "path": "./static/illustration_test_cases/assets/code_artifacts/algorithms/LSTMAE.json"
+    },
+    "CNNAE": {
+      "known": true,
+      "dir": "algorithms",
+      "path": "./static/illustration_test_cases/assets/code_artifacts/algorithms/CNNAE.json"
     },
     "AE": {
       "known": true,
@@ -44,6 +54,11 @@
       "dir": "algorithms",
       "path": "./static/illustration_test_cases/assets/code_artifacts/algorithms/RandomForest.json"
     },
+    "UnderSampling": {
+      "known": true,
+      "dir": "preprocessings",
+      "path": "./static/illustration_test_cases/assets/code_artifacts/preprocessings/UnderSampling.json"
+    },
     "RobustScaler": {
       "known": true,
       "dir": "preprocessings",
@@ -53,6 +68,16 @@
       "known": true,
       "dir": "preprocessings",
       "path": "./static/illustration_test_cases/assets/code_artifacts/preprocessings/MinMaxScaler.json"
+    },
+    "SFFT_createSpectrograms": {
+      "known": true,
+      "dir": "preprocessings",
+      "path": "./static/illustration_test_cases/assets/code_artifacts/preprocessings/SFFT_createSpectrograms.json"
+    },
+    "Smote": {
+      "known": true,
+      "dir": "preprocessings",
+      "path": "./static/illustration_test_cases/assets/code_artifacts/preprocessings/Smote.json"
     },
     "StandardScaler": {
       "known": true,

@@ -138,7 +138,7 @@ def fit_for_generator(config: list) -> dict:
             elif artifact['dir'] == 'preprocessings':
                 logging.debug(f"artifact: {artifact} is prepro")
                 generator_config['Train']['dataTreatment'].append(f"{name}")
-                if name != 'Smote':
+                if name != 'Smote' or name != 'UnderSampling' or name != 'SFFT_createSpectrograms':
                     generator_config['Valid']['dataTreatment'].append(
                         f"{name}")
                     generator_config['Test']['dataTreatment'].append(f"{name}")
