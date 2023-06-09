@@ -47,7 +47,7 @@ You will see this web page:
 
 4. Go through your files, to the project directory. Once you're in, go into _static_, _illustration_test_case_, and select _illustrative_fm_scenario2.xml_.
 
-path: `path_to_project_dir/splc-artifact-main/static/illustration_test_case/illustrative_fm_scenario2.xml`
+path: `path_to_project_dir/static/illustration_test_cases/illustrative_fm_scenario2.xml`
 
 Once it is done, you should see something like this:
 
