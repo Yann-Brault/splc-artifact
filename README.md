@@ -4,7 +4,7 @@ Reproduction package for the paper entitled "Taming the Diversity of Computation
 
 ## Overview
 
-The code in this package constructs and executes the tool to use our approach. To reproduce scenarios depicted in the paper, guidelines are to find in the directory _reproduce_scenarios_. In this directory, there are three different files (one for each scenario).
+The code in this package constructs and executes the tool to use our approach. To reproduce scenarios depicted in the paper, guidelines are to find in the directory _reproduce_scenarios_. In this directory, there are two different files (one for each scenario).
 The replicator should expect the tool to run in less than 5 minutes if she has a working Docker setup. Each scenario can be replicated in less than 15 minutes.
 
 As the technology used to make the package anonymous does not support archive download, the replicator can find a second anonymous repository at this [link](https://anonymous.4open.science/r/splc-artifact-zip/README.md) that contains an archive file of the present repository.

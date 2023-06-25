@@ -63,9 +63,9 @@ You should now see this on your screen :
 
 The area at the top is present across all tabs. It keeps track of all automatically selected or deselected features due to constraint propagation.
 
-### Unfolding the scenario: Elaborate a new notebook and generate
+### Unfolding the scenario: Generate a new notebook
 
-#### Step 1 for scenario 3 unfolding
+#### Step 1
 
 6. Since you are in the tab _Initial Data_, you can check **TimeSeries** and **FullyLabelled** and disable **NormalizedData**.
 
@@ -77,13 +77,13 @@ You should have this result:
 
 ![past appli](../assets/scenarios/scenario_3/past_appli_scenario3.png)
 
-#### Step 2 for scenario 3 unfolding
+#### Step 2
 
 7. You can now click on the tab _Business Requirements_ in order to complete them. Then, you can disable the option **NovelAnomaliesEmergeInProd** and check **GlobalAnomalies**. Since all XPs are not compatible with the configuration, there is no need to clone a notebook.
 
 ![InitialProblem](../assets/scenarios/scenario_3/initialProblem_scenario3.png)
 
-#### Step 3 for scenario 5.3 unfolding
+#### Step 3
 
 8. Hence you can go to the tab _ML Artifacts_ by clicking on it.
 
