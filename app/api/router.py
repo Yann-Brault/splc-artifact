@@ -222,7 +222,6 @@ async def clone(payload: CloneDTO):
     elif clone_name.startswith('XP'):
         if clone_name in exp_nb_map['experiments'].keys():
             shutil.copytree(exp_nb_map['experiments'][f'{clone_name}']['path'], f'{dir_path}/{clone_name}')
-            shutil.copytree(exp_nb_map['experiments'][f'{clone_name}']['dataset'], f'{dir_path}/{clone_name}/dataset')
             shutil.copyfile(exp_nb_map['experiments'][f'{clone_name}']['notebook'], f'{dir_path}/{clone_name}/notebook.ipynb')
 
     zip_name = shutil.make_archive(dir_path, 'zip', CLONE_PROJECT_PATH, clone_name)

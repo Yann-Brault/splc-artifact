@@ -1,7 +1,7 @@
-# Overview of Scenario 2: Reuse, complete, and generate notebook
+# Overview of Scenario 2: Generate a new notebook
 
-The goal is for you to reproduce the scenario depicted in the _section 5.3_ of the paper.
-With this scenario, we aim to evaluate how our approach, through its configuration and generation capabilities, helps the user to compose a solution that experiments only partially cover.
+The goal is for you to reproduce the scenario depicted in the _section 4.2_ of the paper.
+With this scenario, we want to evaluate the correctness of the generative process, from the proposed code artifacts to the generated Notebook, focusing on the scenario where no previous experiments nor solutions are available after the configuration process.
 
 Detailed steps are given to you in order to replicate each step of the scenario.
 
@@ -25,9 +25,7 @@ If a checkbox is grey (see image), it has been automatically checked or disabled
 
 ## Data
 
-This experience reproduces a situation where the replicator only clones a notebook and not a complete experiment, so no datasets are provided with the cloned product.
-
-However, if the replicator, wants to clone the experiment instead of the notebook, datasets will be provided along with the notebook and the configuration. Please know that cloning a full experiment is the scenario depicted in [scenario 1](./reproduce_scenario1.md)
+This experiment reproduces a situation where the replicator only generates new products and does not clones experiments, hence no datasets are provided.
 
 ## Protocol
 
@@ -65,94 +63,62 @@ You should now see this on your screen :
 
 The area at the top is present across all tabs. It keeps track of all automatically selected or deselected features due to constraint propagation.
 
-### Unfolding the scenario: Reuse, complete, and generate notebook
+### Unfolding the scenario: Elaborate a new notebook and generate
 
-#### Step 1 of scenario 2 unfolding
+#### Step 1 for scenario 3 unfolding
 
-6. Since you already are in the tab _Initial Data_, you can check, with one click on the checkbox, the **TimeSeries** option and **PartiallyLabelled** option. Then you can disable **NormalizedData** by double clicking on the checkbox.
+6. Since you are in the tab _Initial Data_, you can check **TimeSeries** and **FullyLabelled** and disable **NormalizedData**.
 
 You should have this result:
 
-![InitialData](../assets/scenarios/scenario_1/initialData_scenario1.png)
+![InitialData](../assets/scenarios/scenario_3/initialData_scenario3.png)
 
-> If you click on tab _Past Experiments_ you can confirm that the **XP1** has been automatically disabled, but the **NB1** is still enabled. As explained in the paper, this is due to the fact that the **XP1** configuration is not compatible with the current one, but the notebook **NB1**, however, is still compatible due to the fact that the algorithm is able to deal with partially labelled data.
+> If you click on tab _Past Experiments_ you can confirm that all XPs are disabled since none are compatible with the data configuration.
 
-![past application](../assets/scenarios/scenario_1/past_appli_scenario1.png)
+![past appli](../assets/scenarios/scenario_3/past_appli_scenario3.png)
 
-#### Step 2 of scenario 2 unfolding
+#### Step 2 for scenario 3 unfolding
 
-7. You can now click on the tab _Business Requirements_ in order to complete them. Then, you can check the options **NovelAnomaliesEmergeInProd**, **PatternAnomaly**, and **Microcontroller** as it will be deployed on this type of system.
+7. You can now click on the tab _Business Requirements_ in order to complete them. Then, you can disable the option **NovelAnomaliesEmergeInProd** and check **GlobalAnomalies**. Since all XPs are not compatible with the configuration, there is no need to clone a notebook.
 
-![InitialProblem](../assets/scenarios/scenario_2/initialProblem_scenario2.png)
+![InitialProblem](../assets/scenarios/scenario_3/initialProblem_scenario3.png)
 
-> If you click on tab _ML Artifacts_ you can confirm that two ML artifacts have been automatically disabled, **CNN** and **Resnet**, as they are not suitable for handling new anomalies in production.
+#### Step 3 for scenario 5.3 unfolding
 
-![solution](../assets/scenarios/scenario_1/solution_scenario1.png)
+8. Hence you can go to the tab _ML Artifacts_ by clicking on it.
 
-> If you now click on tab _Past Experiments_, you can confirm that **XP1** is still disabled and **XP2** and **XP3** are now disabled too. About notebooks, all are still available.
+9. You are going to generate two notebooks (to follow the scenario).
 
-![past appli](../assets/scenarios/scenario_2/past_appli_scenario2.png)
+For the first one, you are going to check **MinMaxScaler** in _PreProcessings_ and **CNN** for the _Algorithms_.
 
-#### Step 3 of scenario 2 unfolding
+![solution1](../assets/scenarios/scenario_3/solution1_scenario3.png)
 
-8. You can now go back to the tab _ML Atifacts_, go to the bottom of the page, and check _QuantizeNN_ by clicking on the checkbox once. Due to constraints linked to the selection, you should have such a configuration:
+11. Once it is done, click on the _initialize_ tab.
 
-![solutionPropagated](../assets/scenarios/scenario_2/solution_propagated_scenario2.png)
-
-> Constraint 5 in Fig. 7 (in the paper) rules out all the non-neural network models, and constraint 15 in Fig. 7 (in the paper) rules out LSTMAE as it is not compatible with quantizing neural networks. At this stage all the experiments are ruled out, additionally, the notebook **NB1** is ruled out too because it uses LSTMAE.
-
-#### Step 4 of scenario 2 unfolding
-
-9. At this stage, if you go back to the _Past Experiments_ tab, you can confirm that all XPs are disabled and that the **NB1** is too. You are able to reuse **NB2** or **NB3**. You can check the **NB2** to add its ML artifacts to your configuration.
-
-![past appli 2](../assets/scenarios/scenario_2/past_appli2_scenario2.png)
-
-> The solution that you configured is composed of the artifacts from the **NB2** and a new artifact **QuantizeNN**.
-
-#### Step 5 of scenario 2 unfolding
-
-10. Go back to the top of the page and click on the _Initialize_ tab.
-
-11. Go down the page to find the _Export Configuration_ section, and then click on the _Export Current Configuration_ button. You should see text appear in the text area. It is your complete configuration as XML formatted text.
+12. Go down the page to find the _Export Configuration_ section, and then click on the _Export Current Configuration_ button. You should see text appear in the text area. It is your complete configuration as XML formatted text.
 
 You should see this on your screen:
 
-![export](../assets/scenarios/scenario_2/export_scenario2.png)
+![export](../assets/reproduce/export.png)
 
-12. Then click on the _Generate Notebook_ button. If it worked correctly you should see a popup window saying that the notebook has been generated.
+13. Then click on the _Generate Notebook_ button. If it worked correctly you should see a popup window saying that the notebook has been generated.
 
 ![popup window](../assets/reproduce/popup.png)
 
-13. Finally, click on the _Download_ button, and the notebook should be downloaded. Depending on your browser settings, you might be asked where you want to save the file. Save it where it will be easy for you to find it.
+14. Finally, click on the _Download_ button, and the notebook should be downloaded. Depending on your browser settings, you might be asked where you want to save the file. Save it where it will be easy for you to find it.
 
-### Extra steps
+15. To generate the second notebook, go back to the _ML Artifacts_ tab. You will have to check a **ResNet** as _Algorithms_ instead of a **CNN**. To do that reset the **CNN** checkbox by double-clicking it (the goal is to have a blank checkbox). It should also reset all _Algorithms_ options. Once it is done, you can check the **ResNet**.
 
-You might want to download the original notebook that you reused. In order to do so:
+![solution1](../assets/scenarios/scenario_3/solution2_scenario3.png)
 
-14. Go back to the top of the page and click on the _Past Experiments_ tab. Go down to the clone form. Click on the select menu in order to display options, then select the notebook option that matches the one you reused.
+![solution1](../assets/scenarios/scenario_3/solution3_scenario3.png)
 
-![selectMenu](../assets/scenarios/scenario_2/clone_reuse_scenario2.png)
-
-Finally, you can click on the button _clone_.
-
-This should trigger the download of the notebook as a **zip file**. Depending on your browser settings, you might be asked where you want to save the file. Save it where it will be easy for you to find it.
-
-Once you have unzipped, you should have a directory with this structure:
-
-NB2_electrical_engine_sound_anomaly_detection/  
-&nbsp;&nbsp;&nbsp; NB2_electrical_engine_sound_anomaly_detection.ipynb  
-&nbsp;&nbsp;&nbsp; current_config.xml
-
-**As you only cloned a notebook and not a full experiment, datasets ARE NOT provided with the notebook.**
-
-However, if you want to be able to run this notebook in particular, you can refer to the [scenario 1](./reproduce_scenario1.md)
+16. To generate this notebook you can follow steps 11 to 14.
 
 ### End
 
-You can open notebooks in order to check their construction.
-
-**The generated notebook, the one downloaded at step 13 IS NOT executable because adapted data import steps are not generated, and more broadly they are generated as a base product for the user to work on, not as a final product.**
+You can open notebooks in order to check their construction but **THEY ARE NOT EXECUTABLE** because adapted data import steps are not generated, and more broadly they are generated as a base product for the user to work on, not as a final product.
 
 ### Conclusion
 
-So with this scenario, you have been able to retrieve several past notebooks and reuse one by adding a new feature in order to generate a new notebook that well suits your problem. You were also capable to clone the reused product to compare it with the new notebook.
+So with this scenario, you have not been able to retrieve past experiments that matched your configuration. Then you decided to conduct a generative process by picking ML artifacts, in a list of configuration-suitable features. You were able to generate several notebooks in order to test different algorithms.

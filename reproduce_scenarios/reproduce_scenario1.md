@@ -1,6 +1,6 @@
 # Overview of Scenario 1: Retrieve and clone notebook
 
-The goal is for you to reproduce scenario 1 depicted in the _section 5.2_ of the paper.
+The goal is for you to reproduce scenario 1 depicted in the _section 4.1_ of the paper.
 With this scenario, we want to evaluate how our approach differentiates itself from a keyword-based search.
 
 Detailed steps are given to you in order to replicate each step of the scenario.
@@ -25,7 +25,7 @@ If a checkbox is grey (see image), it has been automatically checked or disabled
 
 ## Data
 
-Data to reproduce the cloned experiment will be provided when cloning the experiment.
+Due to very restricted storage space for anonymous repositories, the datasets **are not** included in the reproduction package and notebooks **are not** executable.
 
 ## Protocol
 
@@ -103,7 +103,7 @@ Click on the select menu in order to display options, then select the **XP2** op
 
 #### Step 4 of scenario 1 unfolding
 
-9. Finally you can click on the button _clone_. **Beware that the cloning process may take several minutes (2 to 4 minutes on our development machine) as it generates a zip file of 1.6Go corresponding to the complete experiment.**
+9. Finally you can click on the button _clone_.
 
 This should trigger the download of the **XP2** project as a **zip file**. Depending on your browser settings, you might be asked where you want to save the file. Save it where it will be easy for you to find it.
 
@@ -111,25 +111,16 @@ Once you have unzipped the project, you should have a directory with this file s
 
 XP2_electrical_engine_sound_anomaly_detection/  
 &nbsp;&nbsp;&nbsp; XP2_electrical_engine_sound_anomaly_detection/  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dataset/  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IDMT-ISA-ELECTRICAL-ENGINE/  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Spectrograms/  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; notebook.ipynb  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; XP2_config.xml  
 &nbsp;&nbsp;&nbsp; current_config.xml
 
-The subfolder of XP2 contains the configuration, the notebook, and the dataset of this experience.
+The subfolder of XP2 contains the configuration, and the notebook of this experiment.
 Your configuration is the file _current_config.xml_
 
 ### End
 
-You can open the notebook to check its construction.
-
-**If you want to execute the notebook you will have to have a working Jupyter environment and install the Python libraries needed.**
-
-Please refer to the **"How to run a Jupyter Notebook"** section in the main [README.md](../README.md).
-
-Once the Jupyter is running **you can execute the notebook cells in sequential order starting from the imports cell BUT SKIP THE DATA FORMATING SECTION that computes spectrograms. These data are already computed and included with the dataset.**
+You can open the notebook in order to check its construction but it is not executable as it is specified at the beginning of this document.
 
 ### Conclusion
 
